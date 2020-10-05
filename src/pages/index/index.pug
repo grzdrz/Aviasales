@@ -1,0 +1,15 @@
+extends ../base/base
+
+block title 
+  title Главная
+
+block body
+  div(class=["index"])
+    p(class="index__title") Navigation
+    ul(class=["index__refs-list"])
+      li(class=["index__item"])
+        a(class=["index__ref"] href="./prod-page.html")
+          p(class=["index__ref-text"]) Production pages
+      li(class=["index__item"])
+        a(class=["index__ref"] href="./coverage/lcov-report/index.html")
+          p(class=["index__ref-text"]) Test covarage

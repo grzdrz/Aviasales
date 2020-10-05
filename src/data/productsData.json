@@ -1,0 +1,36 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Рождение Венеры",
+      "author": "Сандро Боттичелли",
+      "price": 1000000,
+      "oldPrice": 2000000,
+      "currencyType": "$",
+      "isSold": false
+    },
+    {
+      "id": 2,
+      "name": "Тайная вечеря",
+      "author": "Леонардо да Винчи",
+      "price": 3000000,
+      "currencyType": "$",
+      "isSold": false
+    },
+    {
+      "id": 3,
+      "name": "Сотворение Адама",
+      "author": "Микеланджело",
+      "price": 5000000,
+      "oldPrice": 6000000,
+      "currencyType": "$",
+      "isSold": false
+    },
+    {
+      "id": 4,
+      "name": "Урок анатомии",
+      "author": "Рембрандт",
+      "isSold": true
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "exclude": [
+    "./temp",
+    "./node_modules",
+    "./coverage",
+    "./bandle",
+    "webpack.config.js"
+  ],
+  "compilerOptions": {
+    "outDir": "./bandle/",
+    "noImplicitAny": true,
+    "module": "es6",
+    "target": "es5",
+    "jsx": "react",
+    "allowJs": true,
+    "allowSyntheticDefaultImports": true,
+    "moduleResolution": "Node",
+    "sourceMap": true,
+    "esModuleInterop": true
+  }
+}
