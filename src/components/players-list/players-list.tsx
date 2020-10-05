@@ -15,6 +15,42 @@ interface IState {
 class PlayersList extends React.Component<IProps, IState>{
   constructor(props: IProps) {
     super(props);
+
+    this.handleButtonClick = this.handleButtonClick.bind(this);
+  }
+
+  async handleButtonClick() {
+    this.getSearchId();
+  }
+
+  async getSearchId() {
+    const url = 'https://front-test.beta.aviasales.ru/search/';
+    const response = await fetch(url);
+
+    if (response.ok) {
+      const queryResult = await response.json();
+
+      this.getTickets(queryResult.searchId);
+    }
+  }
+
+  async getTickets(searchId: string) {
+    const tickets = [];
+    let queryResult;
+    do {
+      try {
+        const url = `https://front-test.beta.aviasales.ru/tickets?searchId=${searchId}`;
+        const response = await fetch(url);
+
+        if (response.ok) {
+          queryResult = await response.json();
+          tickets.push(...queryResult.tickets);
+        }
+      } catch (error) {
+        continue;
+      }
+    } while (!queryResult.stop);
+    debugger;
   }
 
   render() {
@@ -35,6 +71,17 @@ class PlayersList extends React.Component<IProps, IState>{
             );
           })
         }
+        <button
+          onClick={this.handleButtonClick}
+          style={{
+            width: '100px',
+            height: '50px',
+            background: 'red',
+            border: '1px solid black',
+          }}
+        >
+          serverTEST
+        </button>
       </ul>
     );
   }
