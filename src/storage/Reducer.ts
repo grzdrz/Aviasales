@@ -1,4 +1,4 @@
-import IAction from "./IAction";
+import IAction from "./types/IAction";
 import ReducerManager from "./ReducerManager";
 
 abstract class Reducer<TState> {

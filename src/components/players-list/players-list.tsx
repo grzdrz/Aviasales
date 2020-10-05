@@ -1,11 +1,18 @@
 import React from 'react';
+import { connect } from 'react-redux';
+import ITicket from '../../storage/TicketsState/types/ITicket';
+import ITicketsAction from '../../storage/TicketsState/types/ITicketsAction';
 
+import ITicketsState from '../../storage/TicketsState/types/ITicketsState';
+import IReducedState from '../../storage/types/IReducerState';
 import PlayerShortInfo from '../player-short-info/player-short-info';
 
+import actions from './actions';
 import './players-list.scss';
 
 interface IProps {
-
+  setAllTickets: (tickets: Array<ITicket>) => ITicketsAction,
+  ticketsState: ITicketsState,
 }
 
 interface IState {
@@ -17,9 +24,15 @@ class PlayersList extends React.Component<IProps, IState>{
     super(props);
 
     this.handleButtonClick = this.handleButtonClick.bind(this);
+
+    this.initialize();
   }
 
-  async handleButtonClick() {
+  initialize() {
+    this.handleButtonClick();
+  }
+
+  /* async  */handleButtonClick() {
     this.getSearchId();
   }
 
@@ -35,6 +48,10 @@ class PlayersList extends React.Component<IProps, IState>{
   }
 
   async getTickets(searchId: string) {
+    const {
+      setAllTickets,
+    } = this.props;
+
     const tickets = [];
     let queryResult;
     do {
@@ -51,22 +68,26 @@ class PlayersList extends React.Component<IProps, IState>{
       }
     } while (!queryResult.stop);
     debugger;
+
+    setAllTickets([].concat(...tickets));
   }
 
   render() {
     const {
-
+      ticketsState,
     } = this.props;
-
-    const playersTEST = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
     return (
       <ul className='players-list'>
         {
-          playersTEST.map((player, i) => {
+          ticketsState.allTickets.map((ticket, i) => {
+            if (i > 10) return;
             return (
               <li className='players-list__player-short-info' key={`players-list__player-short-info_${i}`}>
-                <PlayerShortInfo index={i} />
+                <PlayerShortInfo
+                  index={i}
+                  ticket={ticket}
+                />
               </li>
             );
           })
@@ -87,4 +108,5 @@ class PlayersList extends React.Component<IProps, IState>{
   }
 }
 
-export default PlayersList;
+const mapStateToProps = (state: IReducedState) => state;
+export default connect(mapStateToProps, actions)(PlayersList);

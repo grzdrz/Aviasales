@@ -1,6 +1,7 @@
 import React from 'react';
 
 import compilationOptions from '../../compilationOptions';
+import ITicket from '../../storage/TicketsState/types/ITicket';
 
 import './player-short-info.scss';
 
@@ -11,6 +12,8 @@ interface IProps {
   speed?: number,
   time?: string,
   penaltyTime?: string,
+
+  ticket: ITicket,
 }
 
 function PlayerShortInfo(props: IProps) {
@@ -21,6 +24,8 @@ function PlayerShortInfo(props: IProps) {
     speed = 80,
     time = '00.00.000',
     penaltyTime = '00.00.00',
+
+    ticket,
   } = props;
 
   return (
@@ -41,7 +46,7 @@ function PlayerShortInfo(props: IProps) {
         <p className='player-short-info__name'>{name}</p>
         <p className='player-short-info__time-and-speed'>
           <span className='player-short-info__time'>{time}</span>
-          <span className='player-short-info__speed'>{`${speed} км/ч`}</span>
+          <span className='player-short-info__speed'>{`${ticket.price} км/ч`}</span>
         </p>
         <p className='player-short-info__penalty-time'>{`штрафное время ${penaltyTime}`}</p>
       </div>

@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 
 import PlayersList from '../../components/players-list/players-list';
-import IReducedState from '../../storage/IReducedState';
+import IReducedState from '../../storage/types/IReducerState';
 
 import './prod-page.scss';
 
