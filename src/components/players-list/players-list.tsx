@@ -29,7 +29,7 @@ class PlayersList extends React.Component<IProps, IState>{
         {
           playersTEST.map((player, i) => {
             return (
-              <li className='players-list__player-short-info'>
+              <li className='players-list__player-short-info' key={`players-list__player-short-info_${i}`}>
                 <PlayerShortInfo index={i} />
               </li>
             );

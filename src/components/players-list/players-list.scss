@@ -5,7 +5,7 @@
   align-items: center;
 
   &__player-short-info {
-    max-width: 200px;
+    width: max-content;
     margin: 10px 0px;
   }
 }

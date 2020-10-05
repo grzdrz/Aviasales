@@ -1,4 +1,45 @@
 .player-short-info {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
   padding: 10px;
   border: 1px solid blue;
+  font-weight: 600;
+
+  &__index {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__avatar {
+    display: flex;
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+    border-radius: 50%;
+    border: 1px solid black;
+  }
+
+  &__time-and-speed {
+    font-size: 14px;
+  }
+
+  &__time {
+    color: rgb(141, 80, 177);
+  }
+
+  &__speed {
+    margin-left: 10px;
+    padding-left: 10px;
+    border-left: 2px solid blue;
+    color: blue;
+  }
+
+  &__penalty-time {
+    color: gray;
+    font-size: 14px;
+  }
 }
