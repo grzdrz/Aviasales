@@ -412,7 +412,17 @@ var map = {
 	"./assets/fonts/MaterialIcons/MaterialIcons-Regular.ttf": "./src/assets/fonts/MaterialIcons/MaterialIcons-Regular.ttf",
 	"./assets/fonts/MaterialIcons/MaterialIcons-Regular.woff": "./src/assets/fonts/MaterialIcons/MaterialIcons-Regular.woff",
 	"./assets/fonts/MaterialIcons/MaterialIcons-Regular.woff2": "./src/assets/fonts/MaterialIcons/MaterialIcons-Regular.woff2",
-	"./components/player-short-info/images/defaultAvatar.jpg": "./src/components/player-short-info/images/defaultAvatar.jpg",
+	"./assets/fonts/OpenSans/open-sans-bold.eot": "./src/assets/fonts/OpenSans/open-sans-bold.eot",
+	"./assets/fonts/OpenSans/open-sans-bold.svg": "./src/assets/fonts/OpenSans/open-sans-bold.svg",
+	"./assets/fonts/OpenSans/open-sans-bold.ttf": "./src/assets/fonts/OpenSans/open-sans-bold.ttf",
+	"./assets/fonts/OpenSans/open-sans-bold.woff": "./src/assets/fonts/OpenSans/open-sans-bold.woff",
+	"./assets/fonts/OpenSans/open-sans-bold.woff2": "./src/assets/fonts/OpenSans/open-sans-bold.woff2",
+	"./assets/fonts/OpenSans/open-sans-regular.eot": "./src/assets/fonts/OpenSans/open-sans-regular.eot",
+	"./assets/fonts/OpenSans/open-sans-regular.svg": "./src/assets/fonts/OpenSans/open-sans-regular.svg",
+	"./assets/fonts/OpenSans/open-sans-regular.ttf": "./src/assets/fonts/OpenSans/open-sans-regular.ttf",
+	"./assets/fonts/OpenSans/open-sans-regular.woff": "./src/assets/fonts/OpenSans/open-sans-regular.woff",
+	"./assets/fonts/OpenSans/open-sans-regular.woff2": "./src/assets/fonts/OpenSans/open-sans-regular.woff2",
+	"./components/ticket-info/images/logo.png": "./src/components/ticket-info/images/logo.png",
 	"./data/images/painting-1.jpg": "./src/data/images/painting-1.jpg",
 	"./data/images/painting-2.jpg": "./src/data/images/painting-2.jpg",
 	"./data/images/painting-3.jpg": "./src/data/images/painting-3.jpg",
@@ -535,16 +545,146 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./src/components/player-short-info/images/defaultAvatar.jpg":
-/*!*******************************************************************!*\
-  !*** ./src/components/player-short-info/images/defaultAvatar.jpg ***!
-  \*******************************************************************/
+/***/ "./src/assets/fonts/OpenSans/open-sans-bold.eot":
+/*!******************************************************!*\
+  !*** ./src/assets/fonts/OpenSans/open-sans-bold.eot ***!
+  \******************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = (__webpack_require__.p + "src/components/player-short-info/images/defaultAvatar.jpg");
+/* harmony default export */ __webpack_exports__["default"] = (__webpack_require__.p + "src/assets/fonts/OpenSans/open-sans-bold.eot");
+
+/***/ }),
+
+/***/ "./src/assets/fonts/OpenSans/open-sans-bold.svg":
+/*!******************************************************!*\
+  !*** ./src/assets/fonts/OpenSans/open-sans-bold.svg ***!
+  \******************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = (__webpack_require__.p + "src/assets/fonts/OpenSans/open-sans-bold.svg");
+
+/***/ }),
+
+/***/ "./src/assets/fonts/OpenSans/open-sans-bold.ttf":
+/*!******************************************************!*\
+  !*** ./src/assets/fonts/OpenSans/open-sans-bold.ttf ***!
+  \******************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = (__webpack_require__.p + "src/assets/fonts/OpenSans/open-sans-bold.ttf");
+
+/***/ }),
+
+/***/ "./src/assets/fonts/OpenSans/open-sans-bold.woff":
+/*!*******************************************************!*\
+  !*** ./src/assets/fonts/OpenSans/open-sans-bold.woff ***!
+  \*******************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = (__webpack_require__.p + "src/assets/fonts/OpenSans/open-sans-bold.woff");
+
+/***/ }),
+
+/***/ "./src/assets/fonts/OpenSans/open-sans-bold.woff2":
+/*!********************************************************!*\
+  !*** ./src/assets/fonts/OpenSans/open-sans-bold.woff2 ***!
+  \********************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = (__webpack_require__.p + "src/assets/fonts/OpenSans/open-sans-bold.woff2");
+
+/***/ }),
+
+/***/ "./src/assets/fonts/OpenSans/open-sans-regular.eot":
+/*!*********************************************************!*\
+  !*** ./src/assets/fonts/OpenSans/open-sans-regular.eot ***!
+  \*********************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = (__webpack_require__.p + "src/assets/fonts/OpenSans/open-sans-regular.eot");
+
+/***/ }),
+
+/***/ "./src/assets/fonts/OpenSans/open-sans-regular.svg":
+/*!*********************************************************!*\
+  !*** ./src/assets/fonts/OpenSans/open-sans-regular.svg ***!
+  \*********************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = (__webpack_require__.p + "src/assets/fonts/OpenSans/open-sans-regular.svg");
+
+/***/ }),
+
+/***/ "./src/assets/fonts/OpenSans/open-sans-regular.ttf":
+/*!*********************************************************!*\
+  !*** ./src/assets/fonts/OpenSans/open-sans-regular.ttf ***!
+  \*********************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = (__webpack_require__.p + "src/assets/fonts/OpenSans/open-sans-regular.ttf");
+
+/***/ }),
+
+/***/ "./src/assets/fonts/OpenSans/open-sans-regular.woff":
+/*!**********************************************************!*\
+  !*** ./src/assets/fonts/OpenSans/open-sans-regular.woff ***!
+  \**********************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = (__webpack_require__.p + "src/assets/fonts/OpenSans/open-sans-regular.woff");
+
+/***/ }),
+
+/***/ "./src/assets/fonts/OpenSans/open-sans-regular.woff2":
+/*!***********************************************************!*\
+  !*** ./src/assets/fonts/OpenSans/open-sans-regular.woff2 ***!
+  \***********************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = (__webpack_require__.p + "src/assets/fonts/OpenSans/open-sans-regular.woff2");
+
+/***/ }),
+
+/***/ "./src/components/ticket-info/images/logo.png":
+/*!****************************************************!*\
+  !*** ./src/components/ticket-info/images/logo.png ***!
+  \****************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = (__webpack_require__.p + "src/components/ticket-info/images/logo.png");
 
 /***/ }),
 
@@ -697,4 +837,4 @@ __webpack_require__.r(__webpack_exports__);
 /***/ })
 
 /******/ });
-//# sourceMappingURL=index.js.map?v=d7ed5485520f447be72e
+//# sourceMappingURL=index.js.map?v=fa672a90234d17878a7c

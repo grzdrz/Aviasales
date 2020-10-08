@@ -269,10 +269,10 @@ module.exports = hoistNonReactStatics;
 
 /***/ }),
 
-/***/ "./node_modules/mini-css-extract-plugin/dist/loader.js!./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js?!./node_modules/sass-loader/dist/cjs.js!./src/components/player-short-info/player-short-info.scss":
-/*!********************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/mini-css-extract-plugin/dist/loader.js!./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js??ref--8-3!./node_modules/sass-loader/dist/cjs.js!./src/components/player-short-info/player-short-info.scss ***!
-  \********************************************************************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/mini-css-extract-plugin/dist/loader.js!./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js?!./node_modules/sass-loader/dist/cjs.js!./src/components/checkbox-list/checkbox-list.scss":
+/*!************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/mini-css-extract-plugin/dist/loader.js!./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js??ref--8-3!./node_modules/sass-loader/dist/cjs.js!./src/components/checkbox-list/checkbox-list.scss ***!
+  \************************************************************************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -280,9 +280,20 @@ module.exports = hoistNonReactStatics;
 
 /***/ }),
 
-/***/ "./node_modules/mini-css-extract-plugin/dist/loader.js!./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js?!./node_modules/sass-loader/dist/cjs.js!./src/components/players-list/players-list.scss":
+/***/ "./node_modules/mini-css-extract-plugin/dist/loader.js!./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js?!./node_modules/sass-loader/dist/cjs.js!./src/components/ticket-info/ticket-info.scss":
+/*!********************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/mini-css-extract-plugin/dist/loader.js!./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js??ref--8-3!./node_modules/sass-loader/dist/cjs.js!./src/components/ticket-info/ticket-info.scss ***!
+  \********************************************************************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+// extracted by mini-css-extract-plugin
+
+/***/ }),
+
+/***/ "./node_modules/mini-css-extract-plugin/dist/loader.js!./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js?!./node_modules/sass-loader/dist/cjs.js!./src/components/tickets-list/tickets-list.scss":
 /*!**********************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/mini-css-extract-plugin/dist/loader.js!./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js??ref--8-3!./node_modules/sass-loader/dist/cjs.js!./src/components/players-list/players-list.scss ***!
+  !*** ./node_modules/mini-css-extract-plugin/dist/loader.js!./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js??ref--8-3!./node_modules/sass-loader/dist/cjs.js!./src/components/tickets-list/tickets-list.scss ***!
   \**********************************************************************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
@@ -32427,7 +32438,17 @@ var map = {
 	"./assets/fonts/MaterialIcons/MaterialIcons-Regular.ttf": "./src/assets/fonts/MaterialIcons/MaterialIcons-Regular.ttf",
 	"./assets/fonts/MaterialIcons/MaterialIcons-Regular.woff": "./src/assets/fonts/MaterialIcons/MaterialIcons-Regular.woff",
 	"./assets/fonts/MaterialIcons/MaterialIcons-Regular.woff2": "./src/assets/fonts/MaterialIcons/MaterialIcons-Regular.woff2",
-	"./components/player-short-info/images/defaultAvatar.jpg": "./src/components/player-short-info/images/defaultAvatar.jpg",
+	"./assets/fonts/OpenSans/open-sans-bold.eot": "./src/assets/fonts/OpenSans/open-sans-bold.eot",
+	"./assets/fonts/OpenSans/open-sans-bold.svg": "./src/assets/fonts/OpenSans/open-sans-bold.svg",
+	"./assets/fonts/OpenSans/open-sans-bold.ttf": "./src/assets/fonts/OpenSans/open-sans-bold.ttf",
+	"./assets/fonts/OpenSans/open-sans-bold.woff": "./src/assets/fonts/OpenSans/open-sans-bold.woff",
+	"./assets/fonts/OpenSans/open-sans-bold.woff2": "./src/assets/fonts/OpenSans/open-sans-bold.woff2",
+	"./assets/fonts/OpenSans/open-sans-regular.eot": "./src/assets/fonts/OpenSans/open-sans-regular.eot",
+	"./assets/fonts/OpenSans/open-sans-regular.svg": "./src/assets/fonts/OpenSans/open-sans-regular.svg",
+	"./assets/fonts/OpenSans/open-sans-regular.ttf": "./src/assets/fonts/OpenSans/open-sans-regular.ttf",
+	"./assets/fonts/OpenSans/open-sans-regular.woff": "./src/assets/fonts/OpenSans/open-sans-regular.woff",
+	"./assets/fonts/OpenSans/open-sans-regular.woff2": "./src/assets/fonts/OpenSans/open-sans-regular.woff2",
+	"./components/ticket-info/images/logo.png": "./src/components/ticket-info/images/logo.png",
 	"./data/images/painting-1.jpg": "./src/data/images/painting-1.jpg",
 	"./data/images/painting-2.jpg": "./src/data/images/painting-2.jpg",
 	"./data/images/painting-3.jpg": "./src/data/images/painting-3.jpg",
@@ -32550,6 +32571,176 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./src/assets/fonts/OpenSans/open-sans-bold.eot":
+/*!******************************************************!*\
+  !*** ./src/assets/fonts/OpenSans/open-sans-bold.eot ***!
+  \******************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = (__webpack_require__.p + "src/assets/fonts/OpenSans/open-sans-bold.eot");
+
+/***/ }),
+
+/***/ "./src/assets/fonts/OpenSans/open-sans-bold.svg":
+/*!******************************************************!*\
+  !*** ./src/assets/fonts/OpenSans/open-sans-bold.svg ***!
+  \******************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = (__webpack_require__.p + "src/assets/fonts/OpenSans/open-sans-bold.svg");
+
+/***/ }),
+
+/***/ "./src/assets/fonts/OpenSans/open-sans-bold.ttf":
+/*!******************************************************!*\
+  !*** ./src/assets/fonts/OpenSans/open-sans-bold.ttf ***!
+  \******************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = (__webpack_require__.p + "src/assets/fonts/OpenSans/open-sans-bold.ttf");
+
+/***/ }),
+
+/***/ "./src/assets/fonts/OpenSans/open-sans-bold.woff":
+/*!*******************************************************!*\
+  !*** ./src/assets/fonts/OpenSans/open-sans-bold.woff ***!
+  \*******************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = (__webpack_require__.p + "src/assets/fonts/OpenSans/open-sans-bold.woff");
+
+/***/ }),
+
+/***/ "./src/assets/fonts/OpenSans/open-sans-bold.woff2":
+/*!********************************************************!*\
+  !*** ./src/assets/fonts/OpenSans/open-sans-bold.woff2 ***!
+  \********************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = (__webpack_require__.p + "src/assets/fonts/OpenSans/open-sans-bold.woff2");
+
+/***/ }),
+
+/***/ "./src/assets/fonts/OpenSans/open-sans-regular.eot":
+/*!*********************************************************!*\
+  !*** ./src/assets/fonts/OpenSans/open-sans-regular.eot ***!
+  \*********************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = (__webpack_require__.p + "src/assets/fonts/OpenSans/open-sans-regular.eot");
+
+/***/ }),
+
+/***/ "./src/assets/fonts/OpenSans/open-sans-regular.svg":
+/*!*********************************************************!*\
+  !*** ./src/assets/fonts/OpenSans/open-sans-regular.svg ***!
+  \*********************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = (__webpack_require__.p + "src/assets/fonts/OpenSans/open-sans-regular.svg");
+
+/***/ }),
+
+/***/ "./src/assets/fonts/OpenSans/open-sans-regular.ttf":
+/*!*********************************************************!*\
+  !*** ./src/assets/fonts/OpenSans/open-sans-regular.ttf ***!
+  \*********************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = (__webpack_require__.p + "src/assets/fonts/OpenSans/open-sans-regular.ttf");
+
+/***/ }),
+
+/***/ "./src/assets/fonts/OpenSans/open-sans-regular.woff":
+/*!**********************************************************!*\
+  !*** ./src/assets/fonts/OpenSans/open-sans-regular.woff ***!
+  \**********************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = (__webpack_require__.p + "src/assets/fonts/OpenSans/open-sans-regular.woff");
+
+/***/ }),
+
+/***/ "./src/assets/fonts/OpenSans/open-sans-regular.woff2":
+/*!***********************************************************!*\
+  !*** ./src/assets/fonts/OpenSans/open-sans-regular.woff2 ***!
+  \***********************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = (__webpack_require__.p + "src/assets/fonts/OpenSans/open-sans-regular.woff2");
+
+/***/ }),
+
+/***/ "./src/assets/helpers.ts":
+/*!*******************************!*\
+  !*** ./src/assets/helpers.ts ***!
+  \*******************************/
+/*! exports provided: formateNumber, getHoursAndMinutesWithColon, getHoursAndMinutesIntervalWithPostfixes */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "formateNumber", function() { return formateNumber; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getHoursAndMinutesWithColon", function() { return getHoursAndMinutesWithColon; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getHoursAndMinutesIntervalWithPostfixes", function() { return getHoursAndMinutesIntervalWithPostfixes; });
+function formateNumber(number) {
+    if (number === undefined)
+        return;
+    return number.toString().replace(/(\d)(?=(\d{3})+$)/g, '$1 ');
+}
+;
+function getHoursAndMinutesWithColon(dateString) {
+    var date = new Date(dateString);
+    var hours = date.getUTCHours();
+    var minutes = date.getUTCMinutes();
+    var result = hours + ":" + minutes;
+    return result;
+}
+function getHoursAndMinutesIntervalWithPostfixes(startDateString, duration) {
+    var date = new Date(startDateString);
+    var hours = date.getUTCHours();
+    var minutes = date.getUTCMinutes();
+    var intervalMinutes = hours * 60 + minutes + duration;
+    var resultHours = Math.floor(intervalMinutes / 60);
+    var resultMinutes = intervalMinutes % 60;
+    var result = resultHours + "\u0447 " + resultMinutes + "\u043C";
+    return result;
+}
+/* 2020-10-12T06:31:00.000Z */ 
+
+
+/***/ }),
+
 /***/ "./src/compilationOptions.ts":
 /*!***********************************!*\
   !*** ./src/compilationOptions.ts ***!
@@ -32560,35 +32751,22 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 var compilationOptions = {
-    forGithubPages: true,
+    forGithubPages: false,
 };
 /* harmony default export */ __webpack_exports__["default"] = (compilationOptions);
 
 
 /***/ }),
 
-/***/ "./src/components/player-short-info/images/defaultAvatar.jpg":
-/*!*******************************************************************!*\
-  !*** ./src/components/player-short-info/images/defaultAvatar.jpg ***!
-  \*******************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = (__webpack_require__.p + "src/components/player-short-info/images/defaultAvatar.jpg");
-
-/***/ }),
-
-/***/ "./src/components/player-short-info/player-short-info.scss":
-/*!*****************************************************************!*\
-  !*** ./src/components/player-short-info/player-short-info.scss ***!
-  \*****************************************************************/
+/***/ "./src/components/checkbox-list/checkbox-list.scss":
+/*!*********************************************************!*\
+  !*** ./src/components/checkbox-list/checkbox-list.scss ***!
+  \*********************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 var api = __webpack_require__(/*! ../../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js");
-            var content = __webpack_require__(/*! !../../../node_modules/mini-css-extract-plugin/dist/loader.js!../../../node_modules/css-loader/dist/cjs.js!../../../node_modules/postcss-loader/dist/cjs.js??ref--8-3!../../../node_modules/sass-loader/dist/cjs.js!./player-short-info.scss */ "./node_modules/mini-css-extract-plugin/dist/loader.js!./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js?!./node_modules/sass-loader/dist/cjs.js!./src/components/player-short-info/player-short-info.scss");
+            var content = __webpack_require__(/*! !../../../node_modules/mini-css-extract-plugin/dist/loader.js!../../../node_modules/css-loader/dist/cjs.js!../../../node_modules/postcss-loader/dist/cjs.js??ref--8-3!../../../node_modules/sass-loader/dist/cjs.js!./checkbox-list.scss */ "./node_modules/mini-css-extract-plugin/dist/loader.js!./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js?!./node_modules/sass-loader/dist/cjs.js!./src/components/checkbox-list/checkbox-list.scss");
 
             content = content.__esModule ? content.default : content;
 
@@ -32609,10 +32787,109 @@ module.exports = content.locals || {};
 
 /***/ }),
 
-/***/ "./src/components/player-short-info/player-short-info.tsx":
-/*!****************************************************************!*\
-  !*** ./src/components/player-short-info/player-short-info.tsx ***!
-  \****************************************************************/
+/***/ "./src/components/checkbox-list/checkbox-list.tsx":
+/*!********************************************************!*\
+  !*** ./src/components/checkbox-list/checkbox-list.tsx ***!
+  \********************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _checkbox_list_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./checkbox-list.scss */ "./src/components/checkbox-list/checkbox-list.scss");
+/* harmony import */ var _checkbox_list_scss__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_checkbox_list_scss__WEBPACK_IMPORTED_MODULE_1__);
+
+
+function CheckboxList(props) {
+    var _a = props.title, title = _a === void 0 ? 'Количество пересадок' : _a, _b = props.items, items = _b === void 0 ? [
+        {
+            isChecked: false,
+            name: 'checkbox-list_filter_4',
+            text: 'Все',
+        },
+        {
+            isChecked: false,
+            name: 'checkbox-list_filter_0',
+            text: 'Без пересадок',
+        },
+        {
+            isChecked: false,
+            name: 'checkbox-list_filter_1',
+            text: '1 пересадка',
+        },
+        {
+            isChecked: false,
+            name: 'checkbox-list_filter_2',
+            text: '2 пересадки',
+        },
+        {
+            isChecked: false,
+            name: 'checkbox-list_filter_3',
+            text: '3 пересадки',
+        },
+    ] : _b;
+    return (react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", { className: 'checkbox-list' },
+        react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", { className: 'checkbox-list__title' }, title),
+        react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", { className: 'checkbox-list__items' }, items.map(function (item, i) {
+            return (react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", { className: 'checkbox-list__label', key: "checkbox-list__label_" + i },
+                react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", { className: 'checkbox-list__input', type: 'checkbox', name: item.name, defaultChecked: item.isChecked }),
+                react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", { className: 'checkbox-list__frame' }),
+                react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", { className: 'checkbox-list__text' }, item.text)));
+        }))));
+}
+/* harmony default export */ __webpack_exports__["default"] = (CheckboxList);
+
+
+/***/ }),
+
+/***/ "./src/components/ticket-info/images/logo.png":
+/*!****************************************************!*\
+  !*** ./src/components/ticket-info/images/logo.png ***!
+  \****************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = (__webpack_require__.p + "src/components/ticket-info/images/logo.png");
+
+/***/ }),
+
+/***/ "./src/components/ticket-info/ticket-info.scss":
+/*!*****************************************************!*\
+  !*** ./src/components/ticket-info/ticket-info.scss ***!
+  \*****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+var api = __webpack_require__(/*! ../../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js");
+            var content = __webpack_require__(/*! !../../../node_modules/mini-css-extract-plugin/dist/loader.js!../../../node_modules/css-loader/dist/cjs.js!../../../node_modules/postcss-loader/dist/cjs.js??ref--8-3!../../../node_modules/sass-loader/dist/cjs.js!./ticket-info.scss */ "./node_modules/mini-css-extract-plugin/dist/loader.js!./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js?!./node_modules/sass-loader/dist/cjs.js!./src/components/ticket-info/ticket-info.scss");
+
+            content = content.__esModule ? content.default : content;
+
+            if (typeof content === 'string') {
+              content = [[module.i, content, '']];
+            }
+
+var options = {};
+
+options.insert = "head";
+options.singleton = false;
+
+var update = api(content, options);
+
+
+
+module.exports = content.locals || {};
+
+/***/ }),
+
+/***/ "./src/components/ticket-info/ticket-info.tsx":
+/*!****************************************************!*\
+  !*** ./src/components/ticket-info/ticket-info.tsx ***!
+  \****************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -32621,32 +32898,45 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _compilationOptions__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../compilationOptions */ "./src/compilationOptions.ts");
-/* harmony import */ var _player_short_info_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./player-short-info.scss */ "./src/components/player-short-info/player-short-info.scss");
-/* harmony import */ var _player_short_info_scss__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_player_short_info_scss__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _assets_helpers__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../assets/helpers */ "./src/assets/helpers.ts");
+/* harmony import */ var _ticket_info_scss__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./ticket-info.scss */ "./src/components/ticket-info/ticket-info.scss");
+/* harmony import */ var _ticket_info_scss__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_ticket_info_scss__WEBPACK_IMPORTED_MODULE_3__);
 
 
 
-function PlayerShortInfo(props) {
-    var _a = props.index, index = _a === void 0 ? -1 : _a, _b = props.imageSrc, imageSrc = _b === void 0 ? '' : _b, _c = props.name, name = _c === void 0 ? 'Михаил Лихачев' : _c, _d = props.speed, speed = _d === void 0 ? 80 : _d, _e = props.time, time = _e === void 0 ? '00.00.000' : _e, _f = props.penaltyTime, penaltyTime = _f === void 0 ? '00.00.00' : _f, ticket = props.ticket;
-    return (react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", { className: 'player-short-info' },
-        react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", { className: 'player-short-info__index' }, index),
-        react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", { className: 'player-short-info__avatar', src: imageSrc
-                ? (imageSrc) : ((_compilationOptions__WEBPACK_IMPORTED_MODULE_1__["default"].forGithubPages ? '/ProductSupermarket' : '') + "/src/components/player-short-info/images/defaultAvatar.jpg"), alt: name }),
-        react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", { className: 'player-short-info__info' },
-            react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", { className: 'player-short-info__name' }, name),
-            react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", { className: 'player-short-info__time-and-speed' },
-                react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", { className: 'player-short-info__time' }, time),
-                react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", { className: 'player-short-info__speed' }, ticket.price + " \u043A\u043C/\u0447")),
-            react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", { className: 'player-short-info__penalty-time' }, "\u0448\u0442\u0440\u0430\u0444\u043D\u043E\u0435 \u0432\u0440\u0435\u043C\u044F " + penaltyTime))));
+
+function TicketInfo(props) {
+    var _a = props.ticket, price = _a.price, carrier = _a.carrier, segments = _a.segments;
+    return (react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", { className: 'ticket-info' },
+        react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", { className: 'ticket-info__price' }, Object(_assets_helpers__WEBPACK_IMPORTED_MODULE_2__["formateNumber"])(price) + " \u0420"),
+        react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", { className: 'ticket-info__logo', src: (_compilationOptions__WEBPACK_IMPORTED_MODULE_1__["default"].forGithubPages ? '/Aviasales' : '') + "/src/components/ticket-info/images/logo.png", alt: carrier }),
+        react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", { className: 'ticket-info__route' },
+            react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", { className: 'ticket-info__origins' }, segments[0].origin + " - " + segments[1].origin),
+            react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", { className: 'ticket-info__dates' }, Object(_assets_helpers__WEBPACK_IMPORTED_MODULE_2__["getHoursAndMinutesWithColon"])(segments[0].date) + " - " + Object(_assets_helpers__WEBPACK_IMPORTED_MODULE_2__["getHoursAndMinutesWithColon"])(segments[1].date))),
+        react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", { className: 'ticket-info__time-interval' },
+            react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", { className: 'ticket-info__time-interval-title' }, "\u0432 \u043F\u0443\u0442\u0438"),
+            react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", { className: 'ticket-info__interval' }, Object(_assets_helpers__WEBPACK_IMPORTED_MODULE_2__["getHoursAndMinutesIntervalWithPostfixes"])(segments[0].date, segments[0].duration))),
+        react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", { className: 'ticket-info__stops' },
+            react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", { className: 'ticket-info__stops-count' }, segments[0].stops.length + " \u043F\u0435\u0440\u0435\u0441\u0430\u0434\u043A\u0438"),
+            react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", { className: 'ticket-info__stops-cities' }, "" + segments[0].stops.join(', '))),
+        react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", { className: 'ticket-info__route' },
+            react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", { className: 'ticket-info__origins' }, segments[1].origin + " - " + segments[0].origin),
+            react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", { className: 'ticket-info__dates' }, Object(_assets_helpers__WEBPACK_IMPORTED_MODULE_2__["getHoursAndMinutesWithColon"])(segments[1].date) + " - " + Object(_assets_helpers__WEBPACK_IMPORTED_MODULE_2__["getHoursAndMinutesWithColon"])(segments[0].date))),
+        react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", { className: 'ticket-info__time-interval' },
+            react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", { className: 'ticket-info__time-interval-title' }, "\u0432 \u043F\u0443\u0442\u0438"),
+            react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", { className: 'ticket-info__interval' }, Object(_assets_helpers__WEBPACK_IMPORTED_MODULE_2__["getHoursAndMinutesIntervalWithPostfixes"])(segments[1].date, segments[1].duration))),
+        react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", { className: 'ticket-info__stops' },
+            react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", { className: 'ticket-info__stops-count' }, segments[1].stops.length + " \u043F\u0435\u0440\u0435\u0441\u0430\u0434\u043A\u0438"),
+            react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", { className: 'ticket-info__stops-cities' }, "" + segments[1].stops.join(', ')))));
 }
-/* harmony default export */ __webpack_exports__["default"] = (PlayerShortInfo);
+/* harmony default export */ __webpack_exports__["default"] = (TicketInfo);
 
 
 /***/ }),
 
-/***/ "./src/components/players-list/actions.ts":
+/***/ "./src/components/tickets-list/actions.ts":
 /*!************************************************!*\
-  !*** ./src/components/players-list/actions.ts ***!
+  !*** ./src/components/tickets-list/actions.ts ***!
   \************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
@@ -32663,15 +32953,15 @@ var actions = {
 
 /***/ }),
 
-/***/ "./src/components/players-list/players-list.scss":
+/***/ "./src/components/tickets-list/tickets-list.scss":
 /*!*******************************************************!*\
-  !*** ./src/components/players-list/players-list.scss ***!
+  !*** ./src/components/tickets-list/tickets-list.scss ***!
   \*******************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 var api = __webpack_require__(/*! ../../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js");
-            var content = __webpack_require__(/*! !../../../node_modules/mini-css-extract-plugin/dist/loader.js!../../../node_modules/css-loader/dist/cjs.js!../../../node_modules/postcss-loader/dist/cjs.js??ref--8-3!../../../node_modules/sass-loader/dist/cjs.js!./players-list.scss */ "./node_modules/mini-css-extract-plugin/dist/loader.js!./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js?!./node_modules/sass-loader/dist/cjs.js!./src/components/players-list/players-list.scss");
+            var content = __webpack_require__(/*! !../../../node_modules/mini-css-extract-plugin/dist/loader.js!../../../node_modules/css-loader/dist/cjs.js!../../../node_modules/postcss-loader/dist/cjs.js??ref--8-3!../../../node_modules/sass-loader/dist/cjs.js!./tickets-list.scss */ "./node_modules/mini-css-extract-plugin/dist/loader.js!./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js?!./node_modules/sass-loader/dist/cjs.js!./src/components/tickets-list/tickets-list.scss");
 
             content = content.__esModule ? content.default : content;
 
@@ -32692,9 +32982,9 @@ module.exports = content.locals || {};
 
 /***/ }),
 
-/***/ "./src/components/players-list/players-list.tsx":
+/***/ "./src/components/tickets-list/tickets-list.tsx":
 /*!******************************************************!*\
-  !*** ./src/components/players-list/players-list.tsx ***!
+  !*** ./src/components/tickets-list/tickets-list.tsx ***!
   \******************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
@@ -32704,10 +32994,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
-/* harmony import */ var _player_short_info_player_short_info__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../player-short-info/player-short-info */ "./src/components/player-short-info/player-short-info.tsx");
-/* harmony import */ var _actions__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./actions */ "./src/components/players-list/actions.ts");
-/* harmony import */ var _players_list_scss__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./players-list.scss */ "./src/components/players-list/players-list.scss");
-/* harmony import */ var _players_list_scss__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_players_list_scss__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _ticket_info_ticket_info__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../ticket-info/ticket-info */ "./src/components/ticket-info/ticket-info.tsx");
+/* harmony import */ var _actions__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./actions */ "./src/components/tickets-list/actions.ts");
+/* harmony import */ var _tickets_list_scss__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./tickets-list.scss */ "./src/components/tickets-list/tickets-list.scss");
+/* harmony import */ var _tickets_list_scss__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_tickets_list_scss__WEBPACK_IMPORTED_MODULE_4__);
 var __extends = (undefined && undefined.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -32762,21 +33052,21 @@ var __generator = (undefined && undefined.__generator) || function (thisArg, bod
 
 
 
-var PlayersList = /** @class */ (function (_super) {
-    __extends(PlayersList, _super);
-    function PlayersList(props) {
+var TicketsList = /** @class */ (function (_super) {
+    __extends(TicketsList, _super);
+    function TicketsList(props) {
         var _this = _super.call(this, props) || this;
         _this.handleButtonClick = _this.handleButtonClick.bind(_this);
         _this.initialize();
         return _this;
     }
-    PlayersList.prototype.initialize = function () {
-        this.handleButtonClick();
+    TicketsList.prototype.initialize = function () {
+        /* this.handleButtonClick(); */
     };
-    /* async  */ PlayersList.prototype.handleButtonClick = function () {
+    TicketsList.prototype.handleButtonClick = function () {
         this.getSearchId();
     };
-    PlayersList.prototype.getSearchId = function () {
+    TicketsList.prototype.getSearchId = function () {
         return __awaiter(this, void 0, void 0, function () {
             var url, response, queryResult;
             return __generator(this, function (_a) {
@@ -32797,7 +33087,7 @@ var PlayersList = /** @class */ (function (_super) {
             });
         });
     };
-    PlayersList.prototype.getTickets = function (searchId) {
+    TicketsList.prototype.getTickets = function (searchId) {
         return __awaiter(this, void 0, void 0, function () {
             var setAllTickets, tickets, queryResult, url, response, error_1;
             return __generator(this, function (_a) {
@@ -32826,21 +33116,21 @@ var PlayersList = /** @class */ (function (_super) {
                         if (!queryResult.stop) return [3 /*break*/, 1];
                         _a.label = 7;
                     case 7:
-                        debugger;
+                        /* debugger; */
                         setAllTickets([].concat.apply([], tickets));
                         return [2 /*return*/];
                 }
             });
         });
     };
-    PlayersList.prototype.render = function () {
+    TicketsList.prototype.render = function () {
         var ticketsState = this.props.ticketsState;
-        return (react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", { className: 'players-list' },
+        return (react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", { className: 'tickets-list' },
             ticketsState.allTickets.map(function (ticket, i) {
                 if (i > 10)
                     return;
-                return (react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", { className: 'players-list__player-short-info', key: "players-list__player-short-info_" + i },
-                    react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_player_short_info_player_short_info__WEBPACK_IMPORTED_MODULE_2__["default"], { index: i, ticket: ticket })));
+                return (react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", { className: 'tickets-list__ticket-info', key: "tickets-list__ticket-info_" + i },
+                    react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ticket_info_ticket_info__WEBPACK_IMPORTED_MODULE_2__["default"], { ticket: ticket })));
             }),
             react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", { onClick: this.handleButtonClick, style: {
                     width: '100px',
@@ -32849,10 +33139,10 @@ var PlayersList = /** @class */ (function (_super) {
                     border: '1px solid black',
                 } }, "serverTEST")));
     };
-    return PlayersList;
+    return TicketsList;
 }(react__WEBPACK_IMPORTED_MODULE_0___default.a.Component));
 var mapStateToProps = function (state) { return state; };
-/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_1__["connect"])(mapStateToProps, _actions__WEBPACK_IMPORTED_MODULE_3__["default"])(PlayersList));
+/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_1__["connect"])(mapStateToProps, _actions__WEBPACK_IMPORTED_MODULE_3__["default"])(TicketsList));
 
 
 /***/ }),
@@ -33035,17 +33325,25 @@ module.exports = content.locals || {};
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _components_players_list_players_list__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../components/players-list/players-list */ "./src/components/players-list/players-list.tsx");
-/* harmony import */ var _prod_page_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./prod-page.scss */ "./src/pages/prod-page/prod-page.scss");
-/* harmony import */ var _prod_page_scss__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_prod_page_scss__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _components_tickets_list_tickets_list__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../components/tickets-list/tickets-list */ "./src/components/tickets-list/tickets-list.tsx");
+/* harmony import */ var _components_checkbox_list_checkbox_list__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../components/checkbox-list/checkbox-list */ "./src/components/checkbox-list/checkbox-list.tsx");
+/* harmony import */ var _prod_page_scss__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./prod-page.scss */ "./src/pages/prod-page/prod-page.scss");
+/* harmony import */ var _prod_page_scss__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_prod_page_scss__WEBPACK_IMPORTED_MODULE_3__);
+
 
 
 
 function ProdPage(props) {
     var _a = props;
     return (react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", { className: 'prod-page' },
-        react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", { className: 'prod-page__players-list' },
-            react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_players_list_players_list__WEBPACK_IMPORTED_MODULE_1__["default"], null))));
+        react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("header", { className: 'prod-page__header' }, "HEADER"),
+        react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", { className: 'prod-page__main-content' },
+            react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", { className: 'prod-page__filter-panel' },
+                react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_checkbox_list_checkbox_list__WEBPACK_IMPORTED_MODULE_2__["default"], null)),
+            react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", { className: 'prod-page__tickets-list' },
+                react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", { className: 'prod-page__sorters' }, "SORTERS"),
+                react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", { className: 'prod-page__tickets' },
+                    react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_tickets_list_tickets_list__WEBPACK_IMPORTED_MODULE_1__["default"], null))))));
 }
 /* harmony default export */ __webpack_exports__["default"] = (ProdPage);
 
@@ -33191,4 +33489,4 @@ function setAllTickets(tickets) {
 /***/ })
 
 /******/ });
-//# sourceMappingURL=prod-page.js.map?v=d7ed5485520f447be72e
+//# sourceMappingURL=prod-page.js.map?v=fa672a90234d17878a7c
