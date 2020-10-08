@@ -8,7 +8,7 @@ import IReducedState from '../../storage/types/IReducerState';
 import PlayerShortInfo from '../player-short-info/player-short-info';
 
 import actions from './actions';
-import './players-list.scss';
+import './tickets-list.scss';
 
 interface IProps {
   setAllTickets: (tickets: Array<ITicket>) => ITicketsAction,
@@ -19,7 +19,7 @@ interface IState {
 
 }
 
-class PlayersList extends React.Component<IProps, IState>{
+class TicketsList extends React.Component<IProps, IState>{
   constructor(props: IProps) {
     super(props);
 
@@ -29,10 +29,10 @@ class PlayersList extends React.Component<IProps, IState>{
   }
 
   initialize() {
-    this.handleButtonClick();
+    /* this.handleButtonClick(); */
   }
 
-  /* async  */handleButtonClick() {
+  handleButtonClick() {
     this.getSearchId();
   }
 
@@ -67,7 +67,7 @@ class PlayersList extends React.Component<IProps, IState>{
         continue;
       }
     } while (!queryResult.stop);
-    debugger;
+    /* debugger; */
 
     setAllTickets([].concat(...tickets));
   }
@@ -78,12 +78,12 @@ class PlayersList extends React.Component<IProps, IState>{
     } = this.props;
 
     return (
-      <ul className='players-list'>
+      <ul className='tickets-list'>
         {
           ticketsState.allTickets.map((ticket, i) => {
             if (i > 10) return;
             return (
-              <li className='players-list__player-short-info' key={`players-list__player-short-info_${i}`}>
+              <li className='tickets-list__player-short-info' key={`tickets-list__player-short-info_${i}`}>
                 <PlayerShortInfo
                   index={i}
                   ticket={ticket}
@@ -109,4 +109,4 @@ class PlayersList extends React.Component<IProps, IState>{
 }
 
 const mapStateToProps = (state: IReducedState) => state;
-export default connect(mapStateToProps, actions)(PlayersList);
+export default connect(mapStateToProps, actions)(TicketsList);
