@@ -32751,7 +32751,7 @@ function getHoursAndMinutesIntervalWithPostfixes(startDateString, duration) {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 var compilationOptions = {
-    forGithubPages: false,
+    forGithubPages: true,
 };
 /* harmony default export */ __webpack_exports__["default"] = (compilationOptions);
 
@@ -33489,4 +33489,4 @@ function setAllTickets(tickets) {
 /***/ })
 
 /******/ });
-//# sourceMappingURL=prod-page.js.map?v=fa672a90234d17878a7c
+//# sourceMappingURL=prod-page.js.map?v=11056a5c85ecb9dad133
