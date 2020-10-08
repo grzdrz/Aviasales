@@ -1,0 +1,61 @@
+@import '../../assets/constants.scss';
+
+.ticket-info {
+  width: 100%;
+  display: grid;
+  grid-template-columns: auto auto min-content;
+  grid-row-gap: 0.625rem;
+  padding: 1.25rem 3.125rem 1.25rem 1.25rem;
+  background: white;
+  box-shadow: 0rem 0.125rem 0.5rem rgba(0, 0, 0, 0.1);
+  border-radius: 0.3125rem;
+
+  &__price {
+    margin-bottom: 0.625rem;
+    font-weight: 600;
+    font-size: 1.5rem;
+    color: $color-blue;
+    white-space: nowrap;
+  }
+
+  &__logo {
+    grid-column-start: 3;
+    grid-column-end: 3;
+    margin-bottom: 0.625rem;
+  }
+
+  &__route {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__time-interval {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__stops {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__origins,
+  &__time-interval-title,
+  &__stops-count {
+    font-weight: 600;
+    font-size: 0.75rem;
+    letter-spacing: 0.0313rem;
+    text-transform: uppercase;
+    color: $color-light-gray;
+    white-space: nowrap;
+  }
+
+  &__dates,
+  &__interval,
+  &__stops-cities {
+    font-weight: 600;
+    font-size: 14px;
+    color: $color-gray;
+    white-space: nowrap;
+  }
+}

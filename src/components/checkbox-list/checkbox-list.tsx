@@ -50,9 +50,9 @@ function CheckboxList(props: IProps) {
     <form className='checkbox-list'>
       <p className='checkbox-list__title'>{title}</p>
       <ul className='checkbox-list__items'>
-        {items.map((item) => {
+        {items.map((item, i) => {
           return (
-            <label className='checkbox-list__label'>
+            <label className='checkbox-list__label' key={`checkbox-list__label_${i}`}>
               <input
                 className='checkbox-list__input'
                 type='checkbox'

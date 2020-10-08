@@ -5,7 +5,7 @@ import ITicketsAction from '../../storage/TicketsState/types/ITicketsAction';
 
 import ITicketsState from '../../storage/TicketsState/types/ITicketsState';
 import IReducedState from '../../storage/types/IReducerState';
-import PlayerShortInfo from '../player-short-info/player-short-info';
+import TicketInfo from '../ticket-info/ticket-info';
 
 import actions from './actions';
 import './tickets-list.scss';
@@ -83,9 +83,8 @@ class TicketsList extends React.Component<IProps, IState>{
           ticketsState.allTickets.map((ticket, i) => {
             if (i > 10) return;
             return (
-              <li className='tickets-list__player-short-info' key={`tickets-list__player-short-info_${i}`}>
-                <PlayerShortInfo
-                  index={i}
+              <li className='tickets-list__ticket-info' key={`tickets-list__ticket-info_${i}`}>
+                <TicketInfo
                   ticket={ticket}
                 />
               </li>
