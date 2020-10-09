@@ -269,10 +269,10 @@ module.exports = hoistNonReactStatics;
 
 /***/ }),
 
-/***/ "./node_modules/mini-css-extract-plugin/dist/loader.js!./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js?!./node_modules/sass-loader/dist/cjs.js!./src/components/checkbox-list/checkbox-list.scss":
-/*!************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/mini-css-extract-plugin/dist/loader.js!./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js??ref--8-3!./node_modules/sass-loader/dist/cjs.js!./src/components/checkbox-list/checkbox-list.scss ***!
-  \************************************************************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/mini-css-extract-plugin/dist/loader.js!./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js?!./node_modules/sass-loader/dist/cjs.js!./src/components/filters-list/filters-list.scss":
+/*!**********************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/mini-css-extract-plugin/dist/loader.js!./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js??ref--8-3!./node_modules/sass-loader/dist/cjs.js!./src/components/filters-list/filters-list.scss ***!
+  \**********************************************************************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -32758,15 +32758,34 @@ var compilationOptions = {
 
 /***/ }),
 
-/***/ "./src/components/checkbox-list/checkbox-list.scss":
-/*!*********************************************************!*\
-  !*** ./src/components/checkbox-list/checkbox-list.scss ***!
-  \*********************************************************/
+/***/ "./src/components/filters-list/actions.ts":
+/*!************************************************!*\
+  !*** ./src/components/filters-list/actions.ts ***!
+  \************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _storage_FiltersAndSortersState_actions_setFilters__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../storage/FiltersAndSortersState/actions/setFilters */ "./src/storage/FiltersAndSortersState/actions/setFilters.ts");
+
+var actions = {
+    setFilters: _storage_FiltersAndSortersState_actions_setFilters__WEBPACK_IMPORTED_MODULE_0__["default"],
+};
+/* harmony default export */ __webpack_exports__["default"] = (actions);
+
+
+/***/ }),
+
+/***/ "./src/components/filters-list/filters-list.scss":
+/*!*******************************************************!*\
+  !*** ./src/components/filters-list/filters-list.scss ***!
+  \*******************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 var api = __webpack_require__(/*! ../../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js");
-            var content = __webpack_require__(/*! !../../../node_modules/mini-css-extract-plugin/dist/loader.js!../../../node_modules/css-loader/dist/cjs.js!../../../node_modules/postcss-loader/dist/cjs.js??ref--8-3!../../../node_modules/sass-loader/dist/cjs.js!./checkbox-list.scss */ "./node_modules/mini-css-extract-plugin/dist/loader.js!./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js?!./node_modules/sass-loader/dist/cjs.js!./src/components/checkbox-list/checkbox-list.scss");
+            var content = __webpack_require__(/*! !../../../node_modules/mini-css-extract-plugin/dist/loader.js!../../../node_modules/css-loader/dist/cjs.js!../../../node_modules/postcss-loader/dist/cjs.js??ref--8-3!../../../node_modules/sass-loader/dist/cjs.js!./filters-list.scss */ "./node_modules/mini-css-extract-plugin/dist/loader.js!./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js?!./node_modules/sass-loader/dist/cjs.js!./src/components/filters-list/filters-list.scss");
 
             content = content.__esModule ? content.default : content;
 
@@ -32787,10 +32806,10 @@ module.exports = content.locals || {};
 
 /***/ }),
 
-/***/ "./src/components/checkbox-list/checkbox-list.tsx":
-/*!********************************************************!*\
-  !*** ./src/components/checkbox-list/checkbox-list.tsx ***!
-  \********************************************************/
+/***/ "./src/components/filters-list/filters-list.tsx":
+/*!******************************************************!*\
+  !*** ./src/components/filters-list/filters-list.tsx ***!
+  \******************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -32798,48 +32817,37 @@ module.exports = content.locals || {};
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _checkbox_list_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./checkbox-list.scss */ "./src/components/checkbox-list/checkbox-list.scss");
-/* harmony import */ var _checkbox_list_scss__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_checkbox_list_scss__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
+/* harmony import */ var _actions__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./actions */ "./src/components/filters-list/actions.ts");
+/* harmony import */ var _filters_list_scss__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./filters-list.scss */ "./src/components/filters-list/filters-list.scss");
+/* harmony import */ var _filters_list_scss__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_filters_list_scss__WEBPACK_IMPORTED_MODULE_3__);
 
 
-function CheckboxList(props) {
-    var _a = props.title, title = _a === void 0 ? 'Количество пересадок' : _a, _b = props.items, items = _b === void 0 ? [
-        {
-            isChecked: false,
-            name: 'checkbox-list_filter_4',
-            text: 'Все',
-        },
-        {
-            isChecked: false,
-            name: 'checkbox-list_filter_0',
-            text: 'Без пересадок',
-        },
-        {
-            isChecked: false,
-            name: 'checkbox-list_filter_1',
-            text: '1 пересадка',
-        },
-        {
-            isChecked: false,
-            name: 'checkbox-list_filter_2',
-            text: '2 пересадки',
-        },
-        {
-            isChecked: false,
-            name: 'checkbox-list_filter_3',
-            text: '3 пересадки',
-        },
-    ] : _b;
-    return (react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", { className: 'checkbox-list' },
-        react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", { className: 'checkbox-list__title' }, title),
-        react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", { className: 'checkbox-list__items' }, items.map(function (item, i) {
-            return (react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", { className: 'checkbox-list__label', key: "checkbox-list__label_" + i },
-                react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", { className: 'checkbox-list__input', type: 'checkbox', name: item.name, defaultChecked: item.isChecked }),
-                react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", { className: 'checkbox-list__frame' }),
-                react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", { className: 'checkbox-list__text' }, item.text)));
+
+
+function FiltersList(props) {
+    var _a = props.title, title = _a === void 0 ? 'Количество пересадок' : _a, items = props.items, setFilters = props.setFilters;
+    var handleInputClick = function (event) {
+        /* event.preventDefault(); */
+        var targetInput = event.target;
+        var form = targetInput.closest('.filters-list');
+        var inputs = Array.from(form.querySelectorAll('.filters-list__input')).map(function (element) { return element; });
+        var filters = inputs
+            .filter(function (input) { return input.checked; })
+            .map(function (input) { return input.name; });
+        setFilters(filters);
+    };
+    return (react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", { className: 'filters-list' },
+        react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", { className: 'filters-list__title' }, title),
+        react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", { className: 'filters-list__items' }, items.map(function (item, i) {
+            return (react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", { className: 'filters-list__label', key: "filters-list__label_" + i },
+                react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", { className: 'filters-list__input', type: 'checkbox', name: item.name, defaultChecked: item.isChecked, onClick: handleInputClick }),
+                react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", { className: 'filters-list__frame' }),
+                react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", { className: 'filters-list__text' }, item.text)));
         }))));
 }
-/* harmony default export */ __webpack_exports__["default"] = (CheckboxList);
+var mapStateToProps = function (state) { return state; };
+/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_1__["connect"])(mapStateToProps, _actions__WEBPACK_IMPORTED_MODULE_2__["default"])(FiltersList));
 
 
 /***/ }),
@@ -33325,27 +33333,184 @@ module.exports = content.locals || {};
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _components_tickets_list_tickets_list__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../components/tickets-list/tickets-list */ "./src/components/tickets-list/tickets-list.tsx");
-/* harmony import */ var _components_checkbox_list_checkbox_list__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../components/checkbox-list/checkbox-list */ "./src/components/checkbox-list/checkbox-list.tsx");
-/* harmony import */ var _prod_page_scss__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./prod-page.scss */ "./src/pages/prod-page/prod-page.scss");
-/* harmony import */ var _prod_page_scss__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_prod_page_scss__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
+/* harmony import */ var _components_tickets_list_tickets_list__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../components/tickets-list/tickets-list */ "./src/components/tickets-list/tickets-list.tsx");
+/* harmony import */ var _components_filters_list_filters_list__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../components/filters-list/filters-list */ "./src/components/filters-list/filters-list.tsx");
+/* harmony import */ var _prod_page_scss__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./prod-page.scss */ "./src/pages/prod-page/prod-page.scss");
+/* harmony import */ var _prod_page_scss__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_prod_page_scss__WEBPACK_IMPORTED_MODULE_4__);
 
 
 
 
+
+var filterItems = [
+    {
+        isChecked: false,
+        name: 'filters-list_filter_4',
+        text: 'Все',
+    },
+    {
+        isChecked: false,
+        name: 'filters-list_filter_0',
+        text: 'Без пересадок',
+    },
+    {
+        isChecked: false,
+        name: 'filters-list_filter_1',
+        text: '1 пересадка',
+    },
+    {
+        isChecked: false,
+        name: 'filters-list_filter_2',
+        text: '2 пересадки',
+    },
+    {
+        isChecked: false,
+        name: 'filters-list_filter_3',
+        text: '3 пересадки',
+    },
+];
 function ProdPage(props) {
-    var _a = props;
+    var filtersAndSorterState = props.filtersAndSorterState;
     return (react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", { className: 'prod-page' },
         react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("header", { className: 'prod-page__header' }, "HEADER"),
         react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", { className: 'prod-page__main-content' },
             react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", { className: 'prod-page__filter-panel' },
-                react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_checkbox_list_checkbox_list__WEBPACK_IMPORTED_MODULE_2__["default"], null)),
+                react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_filters_list_filters_list__WEBPACK_IMPORTED_MODULE_3__["default"], { items: filterItems.map(function (filterItem) {
+                        filterItem.isChecked = filtersAndSorterState.filters.includes(filterItem.name);
+                        return filterItem;
+                    }) })),
             react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", { className: 'prod-page__tickets-list' },
                 react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", { className: 'prod-page__sorters' }, "SORTERS"),
                 react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", { className: 'prod-page__tickets' },
-                    react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_tickets_list_tickets_list__WEBPACK_IMPORTED_MODULE_1__["default"], null))))));
+                    react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_tickets_list_tickets_list__WEBPACK_IMPORTED_MODULE_2__["default"], null))))));
 }
-/* harmony default export */ __webpack_exports__["default"] = (ProdPage);
+var mapStateToProps = function (state) { return state; };
+/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_1__["connect"])(mapStateToProps)(ProdPage));
+
+
+/***/ }),
+
+/***/ "./src/storage/FiltersAndSortersState/FiltersAndSorterStateReducer.ts":
+/*!****************************************************************************!*\
+  !*** ./src/storage/FiltersAndSortersState/FiltersAndSorterStateReducer.ts ***!
+  \****************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _Reducer__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../Reducer */ "./src/storage/Reducer.ts");
+var __extends = (undefined && undefined.__extends) || (function () {
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+var __assign = (undefined && undefined.__assign) || function () {
+    __assign = Object.assign || function(t) {
+        for (var s, i = 1, n = arguments.length; i < n; i++) {
+            s = arguments[i];
+            for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
+                t[p] = s[p];
+        }
+        return t;
+    };
+    return __assign.apply(this, arguments);
+};
+var __spreadArrays = (undefined && undefined.__spreadArrays) || function () {
+    for (var s = 0, i = 0, il = arguments.length; i < il; i++) s += arguments[i].length;
+    for (var r = Array(s), k = 0, i = 0; i < il; i++)
+        for (var a = arguments[i], j = 0, jl = a.length; j < jl; j++, k++)
+            r[k] = a[j];
+    return r;
+};
+
+var initializeState = {
+    filters: ['filters-list_filter_4', 'filters-list_filter_1'],
+    sorter: '',
+};
+var FiltersAndSorterStateReducer = /** @class */ (function (_super) {
+    __extends(FiltersAndSorterStateReducer, _super);
+    function FiltersAndSorterStateReducer(reducerManager, state) {
+        if (state === void 0) { state = initializeState; }
+        var _this = _super.call(this, reducerManager, state) || this;
+        _this.reduce = function (state, action) {
+            if (state === void 0) { state = _this.state; }
+            _this.state = __assign({}, state);
+            switch (action.type) {
+                case 'SET_FILTERS':
+                    {
+                        _this.state.filters = __spreadArrays(action.filters);
+                        break;
+                    }
+                    ;
+                case 'SET_SORTER':
+                    {
+                        _this.state.sorter = action.sorter;
+                        break;
+                    }
+                    ;
+            }
+            ;
+            return _this.state;
+        };
+        return _this;
+    }
+    FiltersAndSorterStateReducer.prototype.filterate = function (tickets) {
+        var _this = this;
+        var result = tickets.filter(function (ticket) {
+            var temp1 = _this.state.filters.find(function (filter) {
+                Number.parseInt(filter) === ticket.segments[0].stops.length;
+            });
+            var temp2 = _this.state.filters.find(function (filter) {
+                Number.parseInt(filter) === ticket.segments[1].stops.length;
+            });
+            return temp1 && temp2;
+        });
+        return result;
+    };
+    FiltersAndSorterStateReducer.prototype.sort = function (tickets) {
+        var _this = this;
+        var compare = function (a, b) {
+            if (_this.state.sorter === 'price')
+                return a.price - b.price;
+            else if (_this.state.sorter === 'duration')
+                return a.segments[0].duration + a.segments[1].duration - b.segments[0].duration + b.segments[1].duration;
+        };
+        var sortedTickets = tickets.sort(this.state.sorter ? compare : undefined);
+        return sortedTickets;
+    };
+    return FiltersAndSorterStateReducer;
+}(_Reducer__WEBPACK_IMPORTED_MODULE_0__["default"]));
+/* harmony default export */ __webpack_exports__["default"] = (FiltersAndSorterStateReducer);
+
+
+/***/ }),
+
+/***/ "./src/storage/FiltersAndSortersState/actions/setFilters.ts":
+/*!******************************************************************!*\
+  !*** ./src/storage/FiltersAndSortersState/actions/setFilters.ts ***!
+  \******************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+function setFilters(filters) {
+    return {
+        type: 'SET_FILTERS',
+        filters: filters,
+    };
+}
+/* harmony default export */ __webpack_exports__["default"] = (setFilters);
 
 
 /***/ }),
@@ -33382,12 +33547,16 @@ var Reducer = /** @class */ (function () {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var redux__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! redux */ "./node_modules/redux/es/redux.js");
 /* harmony import */ var _TicketsState_TicketsStateReducer__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./TicketsState/TicketsStateReducer */ "./src/storage/TicketsState/TicketsStateReducer.ts");
+/* harmony import */ var _FiltersAndSortersState_FiltersAndSorterStateReducer__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./FiltersAndSortersState/FiltersAndSorterStateReducer */ "./src/storage/FiltersAndSortersState/FiltersAndSorterStateReducer.ts");
+
 
 
 var ReducerManager = /** @class */ (function () {
     function ReducerManager() {
+        this.filtersAndSorterState = new _FiltersAndSortersState_FiltersAndSorterStateReducer__WEBPACK_IMPORTED_MODULE_2__["default"](this);
         this.ticketsState = new _TicketsState_TicketsStateReducer__WEBPACK_IMPORTED_MODULE_1__["default"](this);
         this.reducer = Object(redux__WEBPACK_IMPORTED_MODULE_0__["combineReducers"])({
+            filtersAndSorterState: this.filtersAndSorterState.reduce,
             ticketsState: this.ticketsState.reduce,
         });
     }
@@ -33442,6 +33611,7 @@ var __spreadArrays = (undefined && undefined.__spreadArrays) || function () {
 
 var initialState = {
     allTickets: new Array(),
+    activeTickets: new Array(),
 };
 var TicketsStateReducer = /** @class */ (function (_super) {
     __extends(TicketsStateReducer, _super);
@@ -33457,10 +33627,16 @@ var TicketsStateReducer = /** @class */ (function (_super) {
                     break;
                 }
             }
+            // this.state.activeTickets = [...this.obtainActiveTickets()];
             return _this.state;
         };
         return _this;
     }
+    TicketsStateReducer.prototype.obtainActiveTickets = function () {
+        var filteredTickets = this.reducerManager.filtersAndSorterState.filterate(this.state.allTickets);
+        var sorteredTickets = this.reducerManager.filtersAndSorterState.sort(filteredTickets);
+        return sorteredTickets;
+    };
     return TicketsStateReducer;
 }(_Reducer__WEBPACK_IMPORTED_MODULE_0__["default"]));
 /* harmony default export */ __webpack_exports__["default"] = (TicketsStateReducer);
@@ -33489,4 +33665,4 @@ function setAllTickets(tickets) {
 /***/ })
 
 /******/ });
-//# sourceMappingURL=prod-page.js.map?v=11056a5c85ecb9dad133
+//# sourceMappingURL=prod-page.js.map?v=fec90249589774f7f5fc
