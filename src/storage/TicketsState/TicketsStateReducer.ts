@@ -16,7 +16,7 @@ class TicketsStateReducer extends Reducer<ITicketsState> {
 
   obtainActiveTickets(): ITicket[] {
     let resultTickets = this.reducerManager.filtersAndSorterState.filterate(this.state.allTickets);
-    // resultTickets = this.reducerManager.filtersAndSorterState.sort(filteredTickets);
+    resultTickets = this.reducerManager.filtersAndSorterState.sort(resultTickets);
     return resultTickets;
   }
 

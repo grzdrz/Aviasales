@@ -39,7 +39,7 @@ function TicketInfo(props: IProps) {
       </span>
       <span className='ticket-info__time-interval'>
         <span className='ticket-info__time-interval-title'>в пути</span>
-        <span className='ticket-info__interval'>{getHoursAndMinutesIntervalWithPostfixes(segments[0].date, segments[0].duration)}</span>
+        <span className='ticket-info__interval'>{getHoursAndMinutesIntervalWithPostfixes(segments[0].duration)}</span>
       </span>
       <span className='ticket-info__stops'>
         <span className='ticket-info__stops-count'>{`${segments[0].stops.length} пересадки`}</span>
@@ -56,12 +56,14 @@ function TicketInfo(props: IProps) {
       </span>
       <span className='ticket-info__time-interval'>
         <span className='ticket-info__time-interval-title'>в пути</span>
-        <span className='ticket-info__interval'>{getHoursAndMinutesIntervalWithPostfixes(segments[1].date, segments[1].duration)}</span>
+        <span className='ticket-info__interval'>{getHoursAndMinutesIntervalWithPostfixes(segments[1].duration)}</span>
       </span>
       <span className='ticket-info__stops'>
         <span className='ticket-info__stops-count'>{`${segments[1].stops.length} пересадки`}</span>
         <span className='ticket-info__stops-cities'>{`${segments[1].stops.join(', ')}`}</span>
       </span>
+
+      {/* <span>{`TEST ${segments[0].duration + segments[1].duration}`}</span> */}
     </div >
   );
 }

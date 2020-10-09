@@ -6,7 +6,7 @@ import IFiltersAndSorterState from "./types/IFiltersAndSorterState";
 
 const initializeState = {
   filters: ['filters-list_filter_0'],
-  sorter: '',
+  sorter: 'price',
 };
 
 class FiltersAndSorterStateReducer extends Reducer<IFiltersAndSorterState>{
@@ -34,8 +34,13 @@ class FiltersAndSorterStateReducer extends Reducer<IFiltersAndSorterState>{
 
   sort(tickets: ITicket[]): ITicket[] {
     const compare = (a: ITicket, b: ITicket) => {
-      if (this.state.sorter === 'price') return a.price - b.price;
-      else if (this.state.sorter === 'duration') return a.segments[0].duration + a.segments[1].duration - b.segments[0].duration + b.segments[1].duration;
+      if (this.state.sorter === 'price')
+        return a.price - b.price;
+      else if (this.state.sorter === 'duration') {
+        const sumDurationA = a.segments[0].duration + a.segments[1].duration;
+        const sumDurationB = b.segments[0].duration + b.segments[1].duration;
+        return sumDurationA - sumDurationB;
+      }
     };
     const sortedTickets = tickets.sort(this.state.sorter ? compare : undefined);
     return sortedTickets;

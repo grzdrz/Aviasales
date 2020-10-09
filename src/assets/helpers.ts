@@ -11,15 +11,9 @@ export function getHoursAndMinutesWithColon(dateString: string): string {
   return result;
 }
 
-export function getHoursAndMinutesIntervalWithPostfixes(startDateString: string, duration: number): string {
-  const date = new Date(startDateString);
-  const hours = date.getUTCHours();
-  const minutes = date.getUTCMinutes();
-
-  const intervalMinutes = hours * 60 + minutes + duration;
-
-  const resultHours = Math.floor(intervalMinutes / 60);
-  const resultMinutes = intervalMinutes % 60;
+export function getHoursAndMinutesIntervalWithPostfixes(duration: number): string {
+  const resultHours = Math.floor(duration / 60);
+  const resultMinutes = duration % 60;
   const result = `${resultHours}ч ${resultMinutes}м`;
   return result;
 }

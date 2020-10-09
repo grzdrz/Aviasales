@@ -5,6 +5,7 @@ import IReducerState from '../../storage/types/IReducerState';
 import IFiltersAndSorterState from '../../storage/FiltersAndSortersState/types/IFiltersAndSorterState';
 import TicketsList from '../../components/tickets-list/tickets-list';
 import FiltersList from '../../components/filters-list/filters-list';
+import SorterPanel from '../../components/sorter-panel/sorter-panel';
 
 import './prod-page.scss';
 
@@ -60,8 +61,8 @@ function ProdPage(props: IProps) {
           />
         </div>
         <div className='prod-page__tickets-list'>
-          <div className='prod-page__sorters'>
-            SORTERS
+          <div className='prod-page__sorter-panel'>
+            <SorterPanel />
           </div>
           <div className='prod-page__tickets'>
             <TicketsList />
