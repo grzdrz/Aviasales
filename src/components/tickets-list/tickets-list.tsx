@@ -80,7 +80,7 @@ class TicketsList extends React.Component<IProps, IState>{
     return (
       <ul className='tickets-list'>
         {
-          ticketsState.allTickets.map((ticket, i) => {
+          ticketsState.activeTickets/* allTickets */.map((ticket, i) => {
             if (i > 10) return;
             return (
               <li className='tickets-list__ticket-info' key={`tickets-list__ticket-info_${i}`}>

@@ -5,7 +5,7 @@ import IFiltersAndSorterAction from "./types/IFiltersAndSorterAction";
 import IFiltersAndSorterState from "./types/IFiltersAndSorterState";
 
 const initializeState = {
-  filters: ['filters-list_filter_4', 'filters-list_filter_1'],
+  filters: ['filters-list_filter_0'],
   sorter: '',
 };
 
@@ -17,10 +17,14 @@ class FiltersAndSorterStateReducer extends Reducer<IFiltersAndSorterState>{
   filterate(tickets: ITicket[]): ITicket[] {
     const result = tickets.filter((ticket) => {
       const temp1 = this.state.filters.find((filter) => {
-        Number.parseInt(filter) === ticket.segments[0].stops.length;
+        const filterStopsCount = Number.parseInt(filter.split('_')[2]);
+        const forwardStopsCount = ticket.segments[0].stops.length;
+        return filterStopsCount === forwardStopsCount;
       });
       const temp2 = this.state.filters.find((filter) => {
-        Number.parseInt(filter) === ticket.segments[1].stops.length;
+        const filterStopsCount = Number.parseInt(filter.split('_')[2])
+        const backStopsCount = ticket.segments[1].stops.length;
+        return filterStopsCount === backStopsCount;
       });
       return temp1 && temp2;
     });

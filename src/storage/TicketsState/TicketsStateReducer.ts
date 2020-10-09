@@ -15,9 +15,9 @@ class TicketsStateReducer extends Reducer<ITicketsState> {
   }
 
   obtainActiveTickets(): ITicket[] {
-    const filteredTickets = this.reducerManager.filtersAndSorterState.filterate(this.state.allTickets);
-    const sorteredTickets = this.reducerManager.filtersAndSorterState.sort(filteredTickets);
-    return sorteredTickets;
+    let resultTickets = this.reducerManager.filtersAndSorterState.filterate(this.state.allTickets);
+    // resultTickets = this.reducerManager.filtersAndSorterState.sort(filteredTickets);
+    return resultTickets;
   }
 
   reduce = (state: ITicketsState = this.state, action: ITicketsAction): ITicketsState => {
@@ -30,7 +30,7 @@ class TicketsStateReducer extends Reducer<ITicketsState> {
       }
     }
 
-    // this.state.activeTickets = [...this.obtainActiveTickets()];
+    this.state.activeTickets = [...this.obtainActiveTickets()];
     return this.state;
   }
 }
