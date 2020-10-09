@@ -33134,7 +33134,7 @@ var TicketsList = /** @class */ (function (_super) {
     TicketsList.prototype.render = function () {
         var ticketsState = this.props.ticketsState;
         return (react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", { className: 'tickets-list' },
-            ticketsState.allTickets.map(function (ticket, i) {
+            ticketsState.activeTickets /* allTickets */.map(function (ticket, i) {
                 if (i > 10)
                     return;
                 return (react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", { className: 'tickets-list__ticket-info', key: "tickets-list__ticket-info_" + i },
@@ -33434,7 +33434,7 @@ var __spreadArrays = (undefined && undefined.__spreadArrays) || function () {
 };
 
 var initializeState = {
-    filters: ['filters-list_filter_4', 'filters-list_filter_1'],
+    filters: ['filters-list_filter_0'],
     sorter: '',
 };
 var FiltersAndSorterStateReducer = /** @class */ (function (_super) {
@@ -33468,10 +33468,14 @@ var FiltersAndSorterStateReducer = /** @class */ (function (_super) {
         var _this = this;
         var result = tickets.filter(function (ticket) {
             var temp1 = _this.state.filters.find(function (filter) {
-                Number.parseInt(filter) === ticket.segments[0].stops.length;
+                var filterStopsCount = Number.parseInt(filter.split('_')[2]);
+                var forwardStopsCount = ticket.segments[0].stops.length;
+                return filterStopsCount === forwardStopsCount;
             });
             var temp2 = _this.state.filters.find(function (filter) {
-                Number.parseInt(filter) === ticket.segments[1].stops.length;
+                var filterStopsCount = Number.parseInt(filter.split('_')[2]);
+                var backStopsCount = ticket.segments[1].stops.length;
+                return filterStopsCount === backStopsCount;
             });
             return temp1 && temp2;
         });
@@ -33627,15 +33631,15 @@ var TicketsStateReducer = /** @class */ (function (_super) {
                     break;
                 }
             }
-            // this.state.activeTickets = [...this.obtainActiveTickets()];
+            _this.state.activeTickets = __spreadArrays(_this.obtainActiveTickets());
             return _this.state;
         };
         return _this;
     }
     TicketsStateReducer.prototype.obtainActiveTickets = function () {
-        var filteredTickets = this.reducerManager.filtersAndSorterState.filterate(this.state.allTickets);
-        var sorteredTickets = this.reducerManager.filtersAndSorterState.sort(filteredTickets);
-        return sorteredTickets;
+        var resultTickets = this.reducerManager.filtersAndSorterState.filterate(this.state.allTickets);
+        // resultTickets = this.reducerManager.filtersAndSorterState.sort(filteredTickets);
+        return resultTickets;
     };
     return TicketsStateReducer;
 }(_Reducer__WEBPACK_IMPORTED_MODULE_0__["default"]));
@@ -33665,4 +33669,4 @@ function setAllTickets(tickets) {
 /***/ })
 
 /******/ });
-//# sourceMappingURL=prod-page.js.map?v=fec90249589774f7f5fc
+//# sourceMappingURL=prod-page.js.map?v=1923865595c942604af4
