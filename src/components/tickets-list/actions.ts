@@ -1,7 +1,9 @@
-import setAllTickets from '../../storage/TicketsState/actions/setAllTickets';
+import setTicketsRequest from '../../storage/TicketsState/actions/setTicketsRequest';
+import setTicketsResponse from '../../storage/TicketsState/actions/setTicketsResponse';
 
 const actions = {
-  setAllTickets,
+  setTicketsRequest,
+  setTicketsResponse,
 };
 
 export default actions;

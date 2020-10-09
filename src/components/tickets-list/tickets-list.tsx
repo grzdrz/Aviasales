@@ -5,6 +5,7 @@ import ITicketsAction from '../../storage/TicketsState/types/ITicketsAction';
 
 import ITicketsState from '../../storage/TicketsState/types/ITicketsState';
 import IReducerState from '../../storage/types/IReducerState';
+import Loader from '../loader/loader';
 import TicketInfo from '../ticket-info/ticket-info';
 
 import actions from './actions';
@@ -12,7 +13,8 @@ import './tickets-list.scss';
 
 interface IProps {
   ticketsState: ITicketsState,
-  setAllTickets: (tickets: Array<ITicket>) => ITicketsAction,
+  setTicketsRequest: () => ITicketsAction,
+  setTicketsResponse: (tickets: Array<ITicket>) => ITicketsAction,
 }
 
 interface IState {
@@ -37,20 +39,22 @@ class TicketsList extends React.Component<IProps, IState>{
   }
 
   async getSearchId() {
+    const { setTicketsRequest } = this.props;
+
     const url = 'https://front-test.beta.aviasales.ru/search/';
     const response = await fetch(url);
 
     if (response.ok) {
       const queryResult = await response.json();
 
+      setTicketsRequest();
+
       this.getTickets(queryResult.searchId);
     }
   }
 
   async getTickets(searchId: string) {
-    const {
-      setAllTickets,
-    } = this.props;
+    const { setTicketsResponse } = this.props;
 
     const tickets = [];
     let queryResult;
@@ -69,7 +73,7 @@ class TicketsList extends React.Component<IProps, IState>{
     } while (!queryResult.stop);
     /* debugger; */
 
-    setAllTickets([].concat(...tickets));
+    setTicketsResponse([].concat(...tickets));
   }
 
   render() {
@@ -79,29 +83,40 @@ class TicketsList extends React.Component<IProps, IState>{
 
     return (
       <ul className='tickets-list'>
-        {
-          ticketsState.activeTickets/* allTickets */.map((ticket, i) => {
-            if (i > 10) return;
-            return (
-              <li className='tickets-list__ticket-info' key={`tickets-list__ticket-info_${i}`}>
-                <TicketInfo
-                  ticket={ticket}
-                />
-              </li>
-            );
-          })
+        <Loader />
+        {ticketsState.isFetching
+          ? (
+            <div className='tickets-list__loader'>
+              <Loader />
+            </div>
+          )
+          : (
+            <>
+              {ticketsState.activeTickets.map((ticket, i) => {
+                if (i > 10) return;
+                return (
+                  <li className='tickets-list__ticket-info' key={`tickets-list__ticket-info_${i}`}>
+                    <TicketInfo
+                      ticket={ticket}
+                    />
+                  </li>
+                );
+              })
+              }
+              <button
+                onClick={this.handleButtonClick}
+                style={{
+                  width: '100px',
+                  height: '50px',
+                  background: 'red',
+                  border: '1px solid black',
+                }}
+              >
+                serverTEST
+              </button>
+            </>
+          )
         }
-        <button
-          onClick={this.handleButtonClick}
-          style={{
-            width: '100px',
-            height: '50px',
-            background: 'red',
-            border: '1px solid black',
-          }}
-        >
-          serverTEST
-        </button>
       </ul>
     );
   }

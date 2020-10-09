@@ -5,6 +5,7 @@ import ITicket from "./types/ITicket";
 import ITicketsState from "./types/ITicketsState";
 
 const initialState = {
+  isFetching: false,
   allTickets: new Array<ITicket>(),
   activeTickets: new Array<ITicket>(),
 };
@@ -24,8 +25,13 @@ class TicketsStateReducer extends Reducer<ITicketsState> {
     this.state = { ...state };
 
     switch (action.type) {
-      case 'SET_ALL_TICKETS': {
+      case 'SET_TICKETS_REQUEST': {
+        this.state.isFetching = true;
+        break;
+      }
+      case 'SET_TICKETS_RESPONSE': {
         this.state.allTickets = [...action.tickets];
+        this.state.isFetching = false;
         break;
       }
     }
