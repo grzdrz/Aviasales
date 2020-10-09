@@ -1,8 +1,9 @@
 import ITicketsState from "../TicketsState/types/ITicketsState";
-import TicketsStateReducer from "../TicketsState/TicketsStateReducer";
+import IFiltersAndSorterState from "../FiltersAndSortersState/types/IFiltersAndSorterState";
 
 interface IReducerState {
   ticketsState: ITicketsState,
+  filtersAndSorterState: IFiltersAndSorterState,
 }
 
 export default IReducerState;

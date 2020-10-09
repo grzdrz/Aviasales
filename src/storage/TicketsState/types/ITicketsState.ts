@@ -1,7 +1,8 @@
 import ITicket from "./ITicket";
 
 interface ITicketsState {
-  allTickets: Array<ITicket>,
+  allTickets: ITicket[],
+  activeTickets: ITicket[],
 }
 
 export default ITicketsState;

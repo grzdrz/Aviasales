@@ -4,15 +4,15 @@ import ITicket from '../../storage/TicketsState/types/ITicket';
 import ITicketsAction from '../../storage/TicketsState/types/ITicketsAction';
 
 import ITicketsState from '../../storage/TicketsState/types/ITicketsState';
-import IReducedState from '../../storage/types/IReducerState';
+import IReducerState from '../../storage/types/IReducerState';
 import TicketInfo from '../ticket-info/ticket-info';
 
 import actions from './actions';
 import './tickets-list.scss';
 
 interface IProps {
-  setAllTickets: (tickets: Array<ITicket>) => ITicketsAction,
   ticketsState: ITicketsState,
+  setAllTickets: (tickets: Array<ITicket>) => ITicketsAction,
 }
 
 interface IState {
@@ -107,5 +107,5 @@ class TicketsList extends React.Component<IProps, IState>{
   }
 }
 
-const mapStateToProps = (state: IReducedState) => state;
+const mapStateToProps = (state: IReducerState) => state;
 export default connect(mapStateToProps, actions)(TicketsList);

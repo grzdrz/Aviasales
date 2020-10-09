@@ -1,6 +1,6 @@
 @import '../../assets/constants.scss';
 
-.checkbox-list {
+.filters-list {
   width: max-content;
   display: flex;
   flex-direction: column;
@@ -40,7 +40,7 @@
     position: absolute;
     opacity: 0;
 
-    &:checked ~ .checkbox-list__frame {
+    &:checked ~ .filters-list__frame {
       border: 0.0625rem solid $color-blue;
 
       &::after {

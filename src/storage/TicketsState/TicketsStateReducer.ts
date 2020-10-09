@@ -6,11 +6,18 @@ import ITicketsState from "./types/ITicketsState";
 
 const initialState = {
   allTickets: new Array<ITicket>(),
+  activeTickets: new Array<ITicket>(),
 };
 
 class TicketsStateReducer extends Reducer<ITicketsState> {
   constructor(reducerManager: ReducerManager, state: ITicketsState = initialState) {
     super(reducerManager, state);
+  }
+
+  obtainActiveTickets(): ITicket[] {
+    const filteredTickets = this.reducerManager.filtersAndSorterState.filterate(this.state.allTickets);
+    const sorteredTickets = this.reducerManager.filtersAndSorterState.sort(filteredTickets);
+    return sorteredTickets;
   }
 
   reduce = (state: ITicketsState = this.state, action: ITicketsAction): ITicketsState => {
@@ -23,6 +30,7 @@ class TicketsStateReducer extends Reducer<ITicketsState> {
       }
     }
 
+    // this.state.activeTickets = [...this.obtainActiveTickets()];
     return this.state;
   }
 }
