@@ -280,6 +280,17 @@ module.exports = hoistNonReactStatics;
 
 /***/ }),
 
+/***/ "./node_modules/mini-css-extract-plugin/dist/loader.js!./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js?!./node_modules/sass-loader/dist/cjs.js!./src/components/sorter-panel/sorter-panel.scss":
+/*!**********************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/mini-css-extract-plugin/dist/loader.js!./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js??ref--8-3!./node_modules/sass-loader/dist/cjs.js!./src/components/sorter-panel/sorter-panel.scss ***!
+  \**********************************************************************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+// extracted by mini-css-extract-plugin
+
+/***/ }),
+
 /***/ "./node_modules/mini-css-extract-plugin/dist/loader.js!./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js?!./node_modules/sass-loader/dist/cjs.js!./src/components/ticket-info/ticket-info.scss":
 /*!********************************************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/mini-css-extract-plugin/dist/loader.js!./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js??ref--8-3!./node_modules/sass-loader/dist/cjs.js!./src/components/ticket-info/ticket-info.scss ***!
@@ -32726,13 +32737,9 @@ function getHoursAndMinutesWithColon(dateString) {
     var result = hours + ":" + minutes;
     return result;
 }
-function getHoursAndMinutesIntervalWithPostfixes(startDateString, duration) {
-    var date = new Date(startDateString);
-    var hours = date.getUTCHours();
-    var minutes = date.getUTCMinutes();
-    var intervalMinutes = hours * 60 + minutes + duration;
-    var resultHours = Math.floor(intervalMinutes / 60);
-    var resultMinutes = intervalMinutes % 60;
+function getHoursAndMinutesIntervalWithPostfixes(duration) {
+    var resultHours = Math.floor(duration / 60);
+    var resultMinutes = duration % 60;
     var result = resultHours + "\u0447 " + resultMinutes + "\u043C";
     return result;
 }
@@ -32852,6 +32859,90 @@ var mapStateToProps = function (state) { return state; };
 
 /***/ }),
 
+/***/ "./src/components/sorter-panel/actions.ts":
+/*!************************************************!*\
+  !*** ./src/components/sorter-panel/actions.ts ***!
+  \************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _storage_FiltersAndSortersState_actions_setSorter__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../storage/FiltersAndSortersState/actions/setSorter */ "./src/storage/FiltersAndSortersState/actions/setSorter.ts");
+
+var actions = {
+    setSorter: _storage_FiltersAndSortersState_actions_setSorter__WEBPACK_IMPORTED_MODULE_0__["default"],
+};
+/* harmony default export */ __webpack_exports__["default"] = (actions);
+
+
+/***/ }),
+
+/***/ "./src/components/sorter-panel/sorter-panel.scss":
+/*!*******************************************************!*\
+  !*** ./src/components/sorter-panel/sorter-panel.scss ***!
+  \*******************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+var api = __webpack_require__(/*! ../../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js");
+            var content = __webpack_require__(/*! !../../../node_modules/mini-css-extract-plugin/dist/loader.js!../../../node_modules/css-loader/dist/cjs.js!../../../node_modules/postcss-loader/dist/cjs.js??ref--8-3!../../../node_modules/sass-loader/dist/cjs.js!./sorter-panel.scss */ "./node_modules/mini-css-extract-plugin/dist/loader.js!./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js?!./node_modules/sass-loader/dist/cjs.js!./src/components/sorter-panel/sorter-panel.scss");
+
+            content = content.__esModule ? content.default : content;
+
+            if (typeof content === 'string') {
+              content = [[module.i, content, '']];
+            }
+
+var options = {};
+
+options.insert = "head";
+options.singleton = false;
+
+var update = api(content, options);
+
+
+
+module.exports = content.locals || {};
+
+/***/ }),
+
+/***/ "./src/components/sorter-panel/sorter-panel.tsx":
+/*!******************************************************!*\
+  !*** ./src/components/sorter-panel/sorter-panel.tsx ***!
+  \******************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
+/* harmony import */ var _actions__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./actions */ "./src/components/sorter-panel/actions.ts");
+/* harmony import */ var _sorter_panel_scss__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./sorter-panel.scss */ "./src/components/sorter-panel/sorter-panel.scss");
+/* harmony import */ var _sorter_panel_scss__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_sorter_panel_scss__WEBPACK_IMPORTED_MODULE_3__);
+
+
+
+
+function SorterPanel(props) {
+    var filtersAndSorterState = props.filtersAndSorterState, setSorter = props.setSorter;
+    var handleButtonClick = function (event) {
+        var targetButton = event.target;
+        var sorterValue = targetButton.dataset['sorterValue'];
+        setSorter(sorterValue);
+    };
+    return (react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", { className: 'sorter-panel' },
+        react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", { className: "sorter-panel__button " + (filtersAndSorterState.sorter === 'price' ? 'sorter-panel__button_active' : ''), "data-sorter-value": 'price', onClick: handleButtonClick }, "\u0441\u0430\u043C\u044B\u0439 \u0434\u0435\u0448\u0435\u0432\u044B\u0439"),
+        react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", { className: "sorter-panel__button " + (filtersAndSorterState.sorter === 'duration' ? 'sorter-panel__button_active' : ''), "data-sorter-value": 'duration', onClick: handleButtonClick }, "\u0441\u0430\u043C\u044B\u0439 \u0431\u044B\u0441\u0442\u0440\u044B\u0439")));
+}
+var mapStateToProps = function (state) { return state; };
+/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_1__["connect"])(mapStateToProps, _actions__WEBPACK_IMPORTED_MODULE_2__["default"])(SorterPanel));
+
+
+/***/ }),
+
 /***/ "./src/components/ticket-info/images/logo.png":
 /*!****************************************************!*\
   !*** ./src/components/ticket-info/images/logo.png ***!
@@ -32923,7 +33014,7 @@ function TicketInfo(props) {
             react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", { className: 'ticket-info__dates' }, Object(_assets_helpers__WEBPACK_IMPORTED_MODULE_2__["getHoursAndMinutesWithColon"])(segments[0].date) + " - " + Object(_assets_helpers__WEBPACK_IMPORTED_MODULE_2__["getHoursAndMinutesWithColon"])(segments[1].date))),
         react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", { className: 'ticket-info__time-interval' },
             react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", { className: 'ticket-info__time-interval-title' }, "\u0432 \u043F\u0443\u0442\u0438"),
-            react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", { className: 'ticket-info__interval' }, Object(_assets_helpers__WEBPACK_IMPORTED_MODULE_2__["getHoursAndMinutesIntervalWithPostfixes"])(segments[0].date, segments[0].duration))),
+            react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", { className: 'ticket-info__interval' }, Object(_assets_helpers__WEBPACK_IMPORTED_MODULE_2__["getHoursAndMinutesIntervalWithPostfixes"])(segments[0].duration))),
         react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", { className: 'ticket-info__stops' },
             react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", { className: 'ticket-info__stops-count' }, segments[0].stops.length + " \u043F\u0435\u0440\u0435\u0441\u0430\u0434\u043A\u0438"),
             react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", { className: 'ticket-info__stops-cities' }, "" + segments[0].stops.join(', '))),
@@ -32932,7 +33023,7 @@ function TicketInfo(props) {
             react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", { className: 'ticket-info__dates' }, Object(_assets_helpers__WEBPACK_IMPORTED_MODULE_2__["getHoursAndMinutesWithColon"])(segments[1].date) + " - " + Object(_assets_helpers__WEBPACK_IMPORTED_MODULE_2__["getHoursAndMinutesWithColon"])(segments[0].date))),
         react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", { className: 'ticket-info__time-interval' },
             react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", { className: 'ticket-info__time-interval-title' }, "\u0432 \u043F\u0443\u0442\u0438"),
-            react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", { className: 'ticket-info__interval' }, Object(_assets_helpers__WEBPACK_IMPORTED_MODULE_2__["getHoursAndMinutesIntervalWithPostfixes"])(segments[1].date, segments[1].duration))),
+            react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", { className: 'ticket-info__interval' }, Object(_assets_helpers__WEBPACK_IMPORTED_MODULE_2__["getHoursAndMinutesIntervalWithPostfixes"])(segments[1].duration))),
         react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", { className: 'ticket-info__stops' },
             react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", { className: 'ticket-info__stops-count' }, segments[1].stops.length + " \u043F\u0435\u0440\u0435\u0441\u0430\u0434\u043A\u0438"),
             react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", { className: 'ticket-info__stops-cities' }, "" + segments[1].stops.join(', ')))));
@@ -33336,8 +33427,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
 /* harmony import */ var _components_tickets_list_tickets_list__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../components/tickets-list/tickets-list */ "./src/components/tickets-list/tickets-list.tsx");
 /* harmony import */ var _components_filters_list_filters_list__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../components/filters-list/filters-list */ "./src/components/filters-list/filters-list.tsx");
-/* harmony import */ var _prod_page_scss__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./prod-page.scss */ "./src/pages/prod-page/prod-page.scss");
-/* harmony import */ var _prod_page_scss__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_prod_page_scss__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _components_sorter_panel_sorter_panel__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../components/sorter-panel/sorter-panel */ "./src/components/sorter-panel/sorter-panel.tsx");
+/* harmony import */ var _prod_page_scss__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./prod-page.scss */ "./src/pages/prod-page/prod-page.scss");
+/* harmony import */ var _prod_page_scss__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_prod_page_scss__WEBPACK_IMPORTED_MODULE_5__);
+
 
 
 
@@ -33381,7 +33474,8 @@ function ProdPage(props) {
                         return filterItem;
                     }) })),
             react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", { className: 'prod-page__tickets-list' },
-                react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", { className: 'prod-page__sorters' }, "SORTERS"),
+                react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", { className: 'prod-page__sorter-panel' },
+                    react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_sorter_panel_sorter_panel__WEBPACK_IMPORTED_MODULE_4__["default"], null)),
                 react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", { className: 'prod-page__tickets' },
                     react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_tickets_list_tickets_list__WEBPACK_IMPORTED_MODULE_2__["default"], null))))));
 }
@@ -33435,7 +33529,7 @@ var __spreadArrays = (undefined && undefined.__spreadArrays) || function () {
 
 var initializeState = {
     filters: ['filters-list_filter_0'],
-    sorter: '',
+    sorter: 'price',
 };
 var FiltersAndSorterStateReducer = /** @class */ (function (_super) {
     __extends(FiltersAndSorterStateReducer, _super);
@@ -33486,8 +33580,11 @@ var FiltersAndSorterStateReducer = /** @class */ (function (_super) {
         var compare = function (a, b) {
             if (_this.state.sorter === 'price')
                 return a.price - b.price;
-            else if (_this.state.sorter === 'duration')
-                return a.segments[0].duration + a.segments[1].duration - b.segments[0].duration + b.segments[1].duration;
+            else if (_this.state.sorter === 'duration') {
+                var sumDurationA = a.segments[0].duration + a.segments[1].duration;
+                var sumDurationB = b.segments[0].duration + b.segments[1].duration;
+                return sumDurationA - sumDurationB;
+            }
         };
         var sortedTickets = tickets.sort(this.state.sorter ? compare : undefined);
         return sortedTickets;
@@ -33515,6 +33612,26 @@ function setFilters(filters) {
     };
 }
 /* harmony default export */ __webpack_exports__["default"] = (setFilters);
+
+
+/***/ }),
+
+/***/ "./src/storage/FiltersAndSortersState/actions/setSorter.ts":
+/*!*****************************************************************!*\
+  !*** ./src/storage/FiltersAndSortersState/actions/setSorter.ts ***!
+  \*****************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+function setSorter(sorter) {
+    return {
+        type: 'SET_SORTER',
+        sorter: sorter,
+    };
+}
+/* harmony default export */ __webpack_exports__["default"] = (setSorter);
 
 
 /***/ }),
@@ -33638,7 +33755,7 @@ var TicketsStateReducer = /** @class */ (function (_super) {
     }
     TicketsStateReducer.prototype.obtainActiveTickets = function () {
         var resultTickets = this.reducerManager.filtersAndSorterState.filterate(this.state.allTickets);
-        // resultTickets = this.reducerManager.filtersAndSorterState.sort(filteredTickets);
+        resultTickets = this.reducerManager.filtersAndSorterState.sort(resultTickets);
         return resultTickets;
     };
     return TicketsStateReducer;
@@ -33669,4 +33786,4 @@ function setAllTickets(tickets) {
 /***/ })
 
 /******/ });
-//# sourceMappingURL=prod-page.js.map?v=1923865595c942604af4
+//# sourceMappingURL=prod-page.js.map?v=ee9c887d2d9610d51252
