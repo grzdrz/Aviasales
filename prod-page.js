@@ -280,6 +280,17 @@ module.exports = hoistNonReactStatics;
 
 /***/ }),
 
+/***/ "./node_modules/mini-css-extract-plugin/dist/loader.js!./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js?!./node_modules/sass-loader/dist/cjs.js!./src/components/loader/loader.scss":
+/*!**********************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/mini-css-extract-plugin/dist/loader.js!./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js??ref--8-3!./node_modules/sass-loader/dist/cjs.js!./src/components/loader/loader.scss ***!
+  \**********************************************************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+// extracted by mini-css-extract-plugin
+
+/***/ }),
+
 /***/ "./node_modules/mini-css-extract-plugin/dist/loader.js!./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js?!./node_modules/sass-loader/dist/cjs.js!./src/components/sorter-panel/sorter-panel.scss":
 /*!**********************************************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/mini-css-extract-plugin/dist/loader.js!./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js??ref--8-3!./node_modules/sass-loader/dist/cjs.js!./src/components/sorter-panel/sorter-panel.scss ***!
@@ -32859,6 +32870,60 @@ var mapStateToProps = function (state) { return state; };
 
 /***/ }),
 
+/***/ "./src/components/loader/loader.scss":
+/*!*******************************************!*\
+  !*** ./src/components/loader/loader.scss ***!
+  \*******************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+var api = __webpack_require__(/*! ../../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js");
+            var content = __webpack_require__(/*! !../../../node_modules/mini-css-extract-plugin/dist/loader.js!../../../node_modules/css-loader/dist/cjs.js!../../../node_modules/postcss-loader/dist/cjs.js??ref--8-3!../../../node_modules/sass-loader/dist/cjs.js!./loader.scss */ "./node_modules/mini-css-extract-plugin/dist/loader.js!./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js?!./node_modules/sass-loader/dist/cjs.js!./src/components/loader/loader.scss");
+
+            content = content.__esModule ? content.default : content;
+
+            if (typeof content === 'string') {
+              content = [[module.i, content, '']];
+            }
+
+var options = {};
+
+options.insert = "head";
+options.singleton = false;
+
+var update = api(content, options);
+
+
+
+module.exports = content.locals || {};
+
+/***/ }),
+
+/***/ "./src/components/loader/loader.tsx":
+/*!******************************************!*\
+  !*** ./src/components/loader/loader.tsx ***!
+  \******************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _loader_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./loader.scss */ "./src/components/loader/loader.scss");
+/* harmony import */ var _loader_scss__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_loader_scss__WEBPACK_IMPORTED_MODULE_1__);
+
+
+function Loader() {
+    return (react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", { className: 'loader' },
+        react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", { className: 'loader__circle' }),
+        react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", { className: 'loader__text' }, "LOADING...")));
+}
+/* harmony default export */ __webpack_exports__["default"] = (Loader);
+
+
+/***/ }),
+
 /***/ "./src/components/sorter-panel/actions.ts":
 /*!************************************************!*\
   !*** ./src/components/sorter-panel/actions.ts ***!
@@ -33042,10 +33107,13 @@ function TicketInfo(props) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _storage_TicketsState_actions_setAllTickets__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../storage/TicketsState/actions/setAllTickets */ "./src/storage/TicketsState/actions/setAllTickets.ts");
+/* harmony import */ var _storage_TicketsState_actions_setTicketsRequest__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../storage/TicketsState/actions/setTicketsRequest */ "./src/storage/TicketsState/actions/setTicketsRequest.ts");
+/* harmony import */ var _storage_TicketsState_actions_setTicketsResponse__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../storage/TicketsState/actions/setTicketsResponse */ "./src/storage/TicketsState/actions/setTicketsResponse.ts");
+
 
 var actions = {
-    setAllTickets: _storage_TicketsState_actions_setAllTickets__WEBPACK_IMPORTED_MODULE_0__["default"],
+    setTicketsRequest: _storage_TicketsState_actions_setTicketsRequest__WEBPACK_IMPORTED_MODULE_0__["default"],
+    setTicketsResponse: _storage_TicketsState_actions_setTicketsResponse__WEBPACK_IMPORTED_MODULE_1__["default"],
 };
 /* harmony default export */ __webpack_exports__["default"] = (actions);
 
@@ -33093,10 +33161,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
-/* harmony import */ var _ticket_info_ticket_info__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../ticket-info/ticket-info */ "./src/components/ticket-info/ticket-info.tsx");
-/* harmony import */ var _actions__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./actions */ "./src/components/tickets-list/actions.ts");
-/* harmony import */ var _tickets_list_scss__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./tickets-list.scss */ "./src/components/tickets-list/tickets-list.scss");
-/* harmony import */ var _tickets_list_scss__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_tickets_list_scss__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _loader_loader__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../loader/loader */ "./src/components/loader/loader.tsx");
+/* harmony import */ var _ticket_info_ticket_info__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../ticket-info/ticket-info */ "./src/components/ticket-info/ticket-info.tsx");
+/* harmony import */ var _actions__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./actions */ "./src/components/tickets-list/actions.ts");
+/* harmony import */ var _tickets_list_scss__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./tickets-list.scss */ "./src/components/tickets-list/tickets-list.scss");
+/* harmony import */ var _tickets_list_scss__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_tickets_list_scss__WEBPACK_IMPORTED_MODULE_5__);
 var __extends = (undefined && undefined.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -33151,6 +33220,7 @@ var __generator = (undefined && undefined.__generator) || function (thisArg, bod
 
 
 
+
 var TicketsList = /** @class */ (function (_super) {
     __extends(TicketsList, _super);
     function TicketsList(props) {
@@ -33167,10 +33237,11 @@ var TicketsList = /** @class */ (function (_super) {
     };
     TicketsList.prototype.getSearchId = function () {
         return __awaiter(this, void 0, void 0, function () {
-            var url, response, queryResult;
+            var setTicketsRequest, url, response, queryResult;
             return __generator(this, function (_a) {
                 switch (_a.label) {
                     case 0:
+                        setTicketsRequest = this.props.setTicketsRequest;
                         url = 'https://front-test.beta.aviasales.ru/search/';
                         return [4 /*yield*/, fetch(url)];
                     case 1:
@@ -33179,6 +33250,7 @@ var TicketsList = /** @class */ (function (_super) {
                         return [4 /*yield*/, response.json()];
                     case 2:
                         queryResult = _a.sent();
+                        setTicketsRequest();
                         this.getTickets(queryResult.searchId);
                         _a.label = 3;
                     case 3: return [2 /*return*/];
@@ -33188,11 +33260,11 @@ var TicketsList = /** @class */ (function (_super) {
     };
     TicketsList.prototype.getTickets = function (searchId) {
         return __awaiter(this, void 0, void 0, function () {
-            var setAllTickets, tickets, queryResult, url, response, error_1;
+            var setTicketsResponse, tickets, queryResult, url, response, error_1;
             return __generator(this, function (_a) {
                 switch (_a.label) {
                     case 0:
-                        setAllTickets = this.props.setAllTickets;
+                        setTicketsResponse = this.props.setTicketsResponse;
                         tickets = [];
                         _a.label = 1;
                     case 1:
@@ -33216,7 +33288,7 @@ var TicketsList = /** @class */ (function (_super) {
                         _a.label = 7;
                     case 7:
                         /* debugger; */
-                        setAllTickets([].concat.apply([], tickets));
+                        setTicketsResponse([].concat.apply([], tickets));
                         return [2 /*return*/];
                 }
             });
@@ -33225,23 +33297,28 @@ var TicketsList = /** @class */ (function (_super) {
     TicketsList.prototype.render = function () {
         var ticketsState = this.props.ticketsState;
         return (react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", { className: 'tickets-list' },
-            ticketsState.activeTickets /* allTickets */.map(function (ticket, i) {
-                if (i > 10)
-                    return;
-                return (react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", { className: 'tickets-list__ticket-info', key: "tickets-list__ticket-info_" + i },
-                    react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ticket_info_ticket_info__WEBPACK_IMPORTED_MODULE_2__["default"], { ticket: ticket })));
-            }),
-            react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", { onClick: this.handleButtonClick, style: {
-                    width: '100px',
-                    height: '50px',
-                    background: 'red',
-                    border: '1px solid black',
-                } }, "serverTEST")));
+            react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_loader_loader__WEBPACK_IMPORTED_MODULE_2__["default"], null),
+            ticketsState.isFetching
+                ? (react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", { className: 'tickets-list__loader' },
+                    react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_loader_loader__WEBPACK_IMPORTED_MODULE_2__["default"], null)))
+                : (react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null,
+                    ticketsState.activeTickets.map(function (ticket, i) {
+                        if (i > 10)
+                            return;
+                        return (react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", { className: 'tickets-list__ticket-info', key: "tickets-list__ticket-info_" + i },
+                            react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ticket_info_ticket_info__WEBPACK_IMPORTED_MODULE_3__["default"], { ticket: ticket })));
+                    }),
+                    react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", { onClick: this.handleButtonClick, style: {
+                            width: '100px',
+                            height: '50px',
+                            background: 'red',
+                            border: '1px solid black',
+                        } }, "serverTEST")))));
     };
     return TicketsList;
 }(react__WEBPACK_IMPORTED_MODULE_0___default.a.Component));
 var mapStateToProps = function (state) { return state; };
-/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_1__["connect"])(mapStateToProps, _actions__WEBPACK_IMPORTED_MODULE_3__["default"])(TicketsList));
+/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_1__["connect"])(mapStateToProps, _actions__WEBPACK_IMPORTED_MODULE_4__["default"])(TicketsList));
 
 
 /***/ }),
@@ -33731,6 +33808,7 @@ var __spreadArrays = (undefined && undefined.__spreadArrays) || function () {
 };
 
 var initialState = {
+    isFetching: false,
     allTickets: new Array(),
     activeTickets: new Array(),
 };
@@ -33743,8 +33821,13 @@ var TicketsStateReducer = /** @class */ (function (_super) {
             if (state === void 0) { state = _this.state; }
             _this.state = __assign({}, state);
             switch (action.type) {
-                case 'SET_ALL_TICKETS': {
+                case 'SET_TICKETS_REQUEST': {
+                    _this.state.isFetching = true;
+                    break;
+                }
+                case 'SET_TICKETS_RESPONSE': {
                     _this.state.allTickets = __spreadArrays(action.tickets);
+                    _this.state.isFetching = false;
                     break;
                 }
             }
@@ -33765,25 +33848,44 @@ var TicketsStateReducer = /** @class */ (function (_super) {
 
 /***/ }),
 
-/***/ "./src/storage/TicketsState/actions/setAllTickets.ts":
-/*!***********************************************************!*\
-  !*** ./src/storage/TicketsState/actions/setAllTickets.ts ***!
-  \***********************************************************/
+/***/ "./src/storage/TicketsState/actions/setTicketsRequest.ts":
+/*!***************************************************************!*\
+  !*** ./src/storage/TicketsState/actions/setTicketsRequest.ts ***!
+  \***************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-function setAllTickets(tickets) {
+function setTicketsRequest() {
     return {
-        type: 'SET_ALL_TICKETS',
+        type: 'SET_TICKETS_REQUEST',
+    };
+}
+/* harmony default export */ __webpack_exports__["default"] = (setTicketsRequest);
+
+
+/***/ }),
+
+/***/ "./src/storage/TicketsState/actions/setTicketsResponse.ts":
+/*!****************************************************************!*\
+  !*** ./src/storage/TicketsState/actions/setTicketsResponse.ts ***!
+  \****************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+function setTicketsResponse(tickets) {
+    return {
+        type: 'SET_TICKETS_RESPONSE',
         tickets: tickets,
     };
 }
-/* harmony default export */ __webpack_exports__["default"] = (setAllTickets);
+/* harmony default export */ __webpack_exports__["default"] = (setTicketsResponse);
 
 
 /***/ })
 
 /******/ });
-//# sourceMappingURL=prod-page.js.map?v=ee9c887d2d9610d51252
+//# sourceMappingURL=prod-page.js.map?v=3ffc4d578b6fcb7cbbb2
