@@ -33109,11 +33109,14 @@ function TicketInfo(props) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _storage_TicketsState_actions_setTicketsRequest__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../storage/TicketsState/actions/setTicketsRequest */ "./src/storage/TicketsState/actions/setTicketsRequest.ts");
 /* harmony import */ var _storage_TicketsState_actions_setTicketsResponse__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../storage/TicketsState/actions/setTicketsResponse */ "./src/storage/TicketsState/actions/setTicketsResponse.ts");
+/* harmony import */ var _storage_TicketsState_actions_increaseTicketsCountOnPage__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../storage/TicketsState/actions/increaseTicketsCountOnPage */ "./src/storage/TicketsState/actions/increaseTicketsCountOnPage.ts");
+
 
 
 var actions = {
     setTicketsRequest: _storage_TicketsState_actions_setTicketsRequest__WEBPACK_IMPORTED_MODULE_0__["default"],
     setTicketsResponse: _storage_TicketsState_actions_setTicketsResponse__WEBPACK_IMPORTED_MODULE_1__["default"],
+    increaseTicketsCountOnPage: _storage_TicketsState_actions_increaseTicketsCountOnPage__WEBPACK_IMPORTED_MODULE_2__["default"],
 };
 /* harmony default export */ __webpack_exports__["default"] = (actions);
 
@@ -33225,11 +33228,21 @@ var TicketsList = /** @class */ (function (_super) {
     __extends(TicketsList, _super);
     function TicketsList(props) {
         var _this = _super.call(this, props) || this;
+        _this.handleScroll = function () {
+            var increaseTicketsCountOnPage = _this.props.increaseTicketsCountOnPage;
+            var scrollRelativeBottom = document.documentElement.getBoundingClientRect().bottom;
+            var viewportHeight = document.documentElement.clientHeight;
+            var scrollBuffer = 100;
+            if (scrollRelativeBottom <= viewportHeight + scrollBuffer) {
+                increaseTicketsCountOnPage();
+            }
+        };
         _this.handleButtonClick = _this.handleButtonClick.bind(_this);
         _this.initialize();
         return _this;
     }
     TicketsList.prototype.initialize = function () {
+        window.addEventListener('scroll', this.handleScroll);
         /* this.handleButtonClick(); */
     };
     TicketsList.prototype.handleButtonClick = function () {
@@ -33296,24 +33309,22 @@ var TicketsList = /** @class */ (function (_super) {
     };
     TicketsList.prototype.render = function () {
         var ticketsState = this.props.ticketsState;
-        return (react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", { className: 'tickets-list' },
-            react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_loader_loader__WEBPACK_IMPORTED_MODULE_2__["default"], null),
-            ticketsState.isFetching
-                ? (react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", { className: 'tickets-list__loader' },
-                    react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_loader_loader__WEBPACK_IMPORTED_MODULE_2__["default"], null)))
-                : (react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null,
-                    ticketsState.activeTickets.map(function (ticket, i) {
-                        if (i > 10)
-                            return;
-                        return (react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", { className: 'tickets-list__ticket-info', key: "tickets-list__ticket-info_" + i },
-                            react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ticket_info_ticket_info__WEBPACK_IMPORTED_MODULE_3__["default"], { ticket: ticket })));
-                    }),
-                    react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", { onClick: this.handleButtonClick, style: {
-                            width: '100px',
-                            height: '50px',
-                            background: 'red',
-                            border: '1px solid black',
-                        } }, "serverTEST")))));
+        return (react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", { className: 'tickets-list' }, ticketsState.isFetching
+            ? (react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", { className: 'tickets-list__loader' },
+                react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_loader_loader__WEBPACK_IMPORTED_MODULE_2__["default"], null)))
+            : (react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null,
+                ticketsState.activeTickets.map(function (ticket, i) {
+                    if (i > ticketsState.ticketsCountOnPage)
+                        return;
+                    return (react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", { className: 'tickets-list__ticket-info', key: "tickets-list__ticket-info_" + i },
+                        react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ticket_info_ticket_info__WEBPACK_IMPORTED_MODULE_3__["default"], { ticket: ticket })));
+                }),
+                react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", { onClick: this.handleButtonClick, style: {
+                        width: '100px',
+                        height: '50px',
+                        background: 'red',
+                        border: '1px solid black',
+                    } }, "serverTEST")))));
     };
     return TicketsList;
 }(react__WEBPACK_IMPORTED_MODULE_0___default.a.Component));
@@ -33809,6 +33820,7 @@ var __spreadArrays = (undefined && undefined.__spreadArrays) || function () {
 
 var initialState = {
     isFetching: false,
+    ticketsCountOnPage: 10,
     allTickets: new Array(),
     activeTickets: new Array(),
 };
@@ -33830,6 +33842,10 @@ var TicketsStateReducer = /** @class */ (function (_super) {
                     _this.state.isFetching = false;
                     break;
                 }
+                case 'INCREASE_TICKETS_COUNT_ON_PAGE': {
+                    _this.state.ticketsCountOnPage += 5;
+                    break;
+                }
             }
             _this.state.activeTickets = __spreadArrays(_this.obtainActiveTickets());
             return _this.state;
@@ -33844,6 +33860,25 @@ var TicketsStateReducer = /** @class */ (function (_super) {
     return TicketsStateReducer;
 }(_Reducer__WEBPACK_IMPORTED_MODULE_0__["default"]));
 /* harmony default export */ __webpack_exports__["default"] = (TicketsStateReducer);
+
+
+/***/ }),
+
+/***/ "./src/storage/TicketsState/actions/increaseTicketsCountOnPage.ts":
+/*!************************************************************************!*\
+  !*** ./src/storage/TicketsState/actions/increaseTicketsCountOnPage.ts ***!
+  \************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+function increaseTicketsCountOnPage() {
+    return {
+        type: 'INCREASE_TICKETS_COUNT_ON_PAGE',
+    };
+}
+/* harmony default export */ __webpack_exports__["default"] = (increaseTicketsCountOnPage);
 
 
 /***/ }),
@@ -33888,4 +33923,4 @@ function setTicketsResponse(tickets) {
 /***/ })
 
 /******/ });
-//# sourceMappingURL=prod-page.js.map?v=3ffc4d578b6fcb7cbbb2
+//# sourceMappingURL=prod-page.js.map?v=e8eb3ca770d6099abc1f
