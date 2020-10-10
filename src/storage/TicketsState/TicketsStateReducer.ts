@@ -6,6 +6,7 @@ import ITicketsState from "./types/ITicketsState";
 
 const initialState = {
   isFetching: false,
+  ticketsCountOnPage: 10,
   allTickets: new Array<ITicket>(),
   activeTickets: new Array<ITicket>(),
 };
@@ -32,6 +33,10 @@ class TicketsStateReducer extends Reducer<ITicketsState> {
       case 'SET_TICKETS_RESPONSE': {
         this.state.allTickets = [...action.tickets];
         this.state.isFetching = false;
+        break;
+      }
+      case 'INCREASE_TICKETS_COUNT_ON_PAGE': {
+        this.state.ticketsCountOnPage += 5;
         break;
       }
     }

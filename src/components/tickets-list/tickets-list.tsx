@@ -1,4 +1,4 @@
-import React from 'react';
+import React/* , { useState } */ from 'react';
 import { connect } from 'react-redux';
 import ITicket from '../../storage/TicketsState/types/ITicket';
 import ITicketsAction from '../../storage/TicketsState/types/ITicketsAction';
@@ -15,10 +15,10 @@ interface IProps {
   ticketsState: ITicketsState,
   setTicketsRequest: () => ITicketsAction,
   setTicketsResponse: (tickets: Array<ITicket>) => ITicketsAction,
+  increaseTicketsCountOnPage: () => ITicketsAction,
 }
 
 interface IState {
-
 }
 
 class TicketsList extends React.Component<IProps, IState>{
@@ -31,6 +31,7 @@ class TicketsList extends React.Component<IProps, IState>{
   }
 
   initialize() {
+    window.addEventListener('scroll', this.handleScroll);
     /* this.handleButtonClick(); */
   }
 
@@ -76,6 +77,20 @@ class TicketsList extends React.Component<IProps, IState>{
     setTicketsResponse([].concat(...tickets));
   }
 
+  handleScroll = () => {
+    const {
+      increaseTicketsCountOnPage,
+    } = this.props;
+
+    const scrollRelativeBottom = document.documentElement.getBoundingClientRect().bottom;
+    const viewportHeight = document.documentElement.clientHeight;
+    const scrollBuffer = 100;
+
+    if (scrollRelativeBottom <= viewportHeight + scrollBuffer) {
+      increaseTicketsCountOnPage();
+    }
+  }
+
   render() {
     const {
       ticketsState,
@@ -83,7 +98,7 @@ class TicketsList extends React.Component<IProps, IState>{
 
     return (
       <ul className='tickets-list'>
-        <Loader />
+        {/* <Loader /> */}
         {ticketsState.isFetching
           ? (
             <div className='tickets-list__loader'>
@@ -93,7 +108,7 @@ class TicketsList extends React.Component<IProps, IState>{
           : (
             <>
               {ticketsState.activeTickets.map((ticket, i) => {
-                if (i > 10) return;
+                if (i > ticketsState.ticketsCountOnPage) return;
                 return (
                   <li className='tickets-list__ticket-info' key={`tickets-list__ticket-info_${i}`}>
                     <TicketInfo
