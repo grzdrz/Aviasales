@@ -6,6 +6,7 @@ import IFiltersAndSorterState from '../../storage/FiltersAndSortersState/types/I
 import TicketsList from '../../components/tickets-list/tickets-list';
 import FiltersList from '../../components/filters-list/filters-list';
 import SorterPanel from '../../components/sorter-panel/sorter-panel';
+import Header from '../../components/header/header';
 
 import './prod-page.scss';
 
@@ -49,7 +50,7 @@ function ProdPage(props: IProps) {
   return (
     <div className='prod-page'>
       <header className='prod-page__header'>
-        HEADER
+        <Header />
       </header>
       <div className='prod-page__main-content'>
         <div className='prod-page__filter-panel'>

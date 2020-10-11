@@ -3,19 +3,21 @@ export function formateNumber(number: number) {
   return number.toString().replace(/(\d)(?=(\d{3})+$)/g, '$1 ');
 };
 
-export function getHoursAndMinutesWithColon(dateString: string): string {
-  const date = new Date(dateString);
-  const hours = date.getUTCHours();
-  const minutes = date.getUTCMinutes();
-  const result = `${hours}:${minutes}`;
-  return result;
-}
+export function declineWord(number: number, words: string[]) {
+  /* const words = ['сутки', 'суток', 'суток']; */
 
-export function getHoursAndMinutesIntervalWithPostfixes(duration: number): string {
-  const resultHours = Math.floor(duration / 60);
-  const resultMinutes = duration % 60;
-  const result = `${resultHours}ч ${resultMinutes}м`;
-  return result;
-}
+  const stringifiedNumber = number.toString();
+  const isEndOnOne = stringifiedNumber[stringifiedNumber.length - 1] === '1';
+  const isNotEqualEleven = number !== 11;
+  if (isEndOnOne && isNotEqualEleven)
+    return words[0];
 
-/* 2020-10-12T06:31:00.000Z */
+  const isEndNumberMoreThenOne = Number.parseInt(stringifiedNumber[stringifiedNumber.length - 1]) > 1;
+  const isEndNumberLessThenFour = Number.parseInt(stringifiedNumber[stringifiedNumber.length - 1]) <= 4;
+  const isEndNumberBetweenTwelveAndFourteen = number < 12 || number > 14;
+  const isSecondWord = isEndNumberMoreThenOne && isEndNumberLessThenFour && isEndNumberBetweenTwelveAndFourteen;
+  if (isSecondWord)
+    return words[1];
+
+  return words[2];
+}
