@@ -32740,34 +32740,34 @@ __webpack_require__.r(__webpack_exports__);
 /*!*******************************!*\
   !*** ./src/assets/helpers.ts ***!
   \*******************************/
-/*! exports provided: formateNumber, getHoursAndMinutesWithColon, getHoursAndMinutesIntervalWithPostfixes */
+/*! exports provided: formateNumber, declineWord */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "formateNumber", function() { return formateNumber; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getHoursAndMinutesWithColon", function() { return getHoursAndMinutesWithColon; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getHoursAndMinutesIntervalWithPostfixes", function() { return getHoursAndMinutesIntervalWithPostfixes; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "declineWord", function() { return declineWord; });
 function formateNumber(number) {
     if (number === undefined)
         return;
     return number.toString().replace(/(\d)(?=(\d{3})+$)/g, '$1 ');
 }
 ;
-function getHoursAndMinutesWithColon(dateString) {
-    var date = new Date(dateString);
-    var hours = date.getUTCHours();
-    var minutes = date.getUTCMinutes();
-    var result = hours + ":" + minutes;
-    return result;
+function declineWord(number, words) {
+    /* const words = ['сутки', 'суток', 'суток']; */
+    var stringifiedNumber = number.toString();
+    var isEndOnOne = stringifiedNumber[stringifiedNumber.length - 1] === '1';
+    var isNotEqualEleven = number !== 11;
+    if (isEndOnOne && isNotEqualEleven)
+        return words[0];
+    var isEndNumberMoreThenOne = Number.parseInt(stringifiedNumber[stringifiedNumber.length - 1]) > 1;
+    var isEndNumberLessThenFour = Number.parseInt(stringifiedNumber[stringifiedNumber.length - 1]) <= 4;
+    var isEndNumberBetweenTwelveAndFourteen = number < 12 || number > 14;
+    var isSecondWord = isEndNumberMoreThenOne && isEndNumberLessThenFour && isEndNumberBetweenTwelveAndFourteen;
+    if (isSecondWord)
+        return words[1];
+    return words[2];
 }
-function getHoursAndMinutesIntervalWithPostfixes(duration) {
-    var resultHours = Math.floor(duration / 60);
-    var resultMinutes = duration % 60;
-    var result = resultHours + "\u0447 " + resultMinutes + "\u043C";
-    return result;
-}
-/* 2020-10-12T06:31:00.000Z */ 
 
 
 /***/ }),
@@ -33102,6 +33102,56 @@ var mapStateToProps = function (state) { return state; };
 
 /***/ }),
 
+/***/ "./src/components/ticket-info/formaters.ts":
+/*!*************************************************!*\
+  !*** ./src/components/ticket-info/formaters.ts ***!
+  \*************************************************/
+/*! exports provided: formateIntervalWithColon, formateIntervalWithPostfixes */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "formateIntervalWithColon", function() { return formateIntervalWithColon; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "formateIntervalWithPostfixes", function() { return formateIntervalWithPostfixes; });
+/* 2020-10-12T06:31:00.000Z */
+function timeToString(hours, minutes) {
+    if (minutes === 6) {
+        hours += 1;
+        minutes = 0;
+    }
+    var hoursString = hours.toString().length === 1 ? "0" + hours : "" + hours;
+    var minutesString = minutes.toString().length === 1 ? minutes + "0" : "" + minutes;
+    return [
+        hoursString,
+        minutesString,
+    ];
+}
+var formateIntervalWithColon = function (dateString, duration) {
+    var startDate = new Date(dateString);
+    var startHours = startDate.getUTCHours();
+    var startMinutes = startDate.getUTCMinutes();
+    var _a = timeToString(startHours, startMinutes), startHoursString = _a[0], startMinutesString = _a[1];
+    var startTime = startHoursString + ":" + startMinutesString;
+    var durationHours = Math.floor(duration / 60 / 24);
+    var durationMinutes = duration % 60;
+    var finishHours = startHours + durationHours + Math.floor((startMinutes + durationMinutes) / 60 / 24);
+    var finishMinutes = (startMinutes + durationMinutes) % 60;
+    var _b = timeToString(finishHours, finishMinutes), finishHoursString = _b[0], finishMinutesString = _b[1];
+    var finishTime = finishHoursString + ":" + finishMinutesString;
+    var result = startTime + " - " + finishTime;
+    return result;
+};
+function formateIntervalWithPostfixes(duration) {
+    var hours = Math.floor(duration / 60);
+    var minutes = duration % 60;
+    var _a = timeToString(hours, minutes), hoursString = _a[0], minutesString = _a[1];
+    var result = hoursString + "\u0447 " + minutesString + "\u043C";
+    return result;
+}
+
+
+/***/ }),
+
 /***/ "./src/components/ticket-info/images/logo.png":
 /*!****************************************************!*\
   !*** ./src/components/ticket-info/images/logo.png ***!
@@ -33156,8 +33206,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _assets_helpers__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../assets/helpers */ "./src/assets/helpers.ts");
-/* harmony import */ var _ticket_info_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./ticket-info.scss */ "./src/components/ticket-info/ticket-info.scss");
-/* harmony import */ var _ticket_info_scss__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_ticket_info_scss__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _formaters__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./formaters */ "./src/components/ticket-info/formaters.ts");
+/* harmony import */ var _ticket_info_scss__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./ticket-info.scss */ "./src/components/ticket-info/ticket-info.scss");
+/* harmony import */ var _ticket_info_scss__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_ticket_info_scss__WEBPACK_IMPORTED_MODULE_3__);
+
 
 
 
@@ -33168,21 +33220,21 @@ function TicketInfo(props) {
         react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", { className: 'ticket-info__logo', src: "https://pics.avs.io/99/36/" + carrier + ".png", alt: carrier }),
         react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", { className: 'ticket-info__route' },
             react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", { className: 'ticket-info__origins' }, segments[0].origin + " - " + segments[1].origin),
-            react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", { className: 'ticket-info__dates' }, Object(_assets_helpers__WEBPACK_IMPORTED_MODULE_1__["getHoursAndMinutesWithColon"])(segments[0].date) + " - " + Object(_assets_helpers__WEBPACK_IMPORTED_MODULE_1__["getHoursAndMinutesWithColon"])(segments[1].date))),
+            react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", { className: 'ticket-info__dates' }, Object(_formaters__WEBPACK_IMPORTED_MODULE_2__["formateIntervalWithColon"])(segments[0].date, segments[0].duration))),
         react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", { className: 'ticket-info__time-interval' },
             react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", { className: 'ticket-info__time-interval-title' }, "\u0432 \u043F\u0443\u0442\u0438"),
-            react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", { className: 'ticket-info__interval' }, Object(_assets_helpers__WEBPACK_IMPORTED_MODULE_1__["getHoursAndMinutesIntervalWithPostfixes"])(segments[0].duration))),
+            react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", { className: 'ticket-info__interval' }, Object(_formaters__WEBPACK_IMPORTED_MODULE_2__["formateIntervalWithPostfixes"])(segments[0].duration))),
         react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", { className: 'ticket-info__stops' },
-            react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", { className: 'ticket-info__stops-count' }, segments[0].stops.length + " \u043F\u0435\u0440\u0435\u0441\u0430\u0434\u043A\u0438"),
+            react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", { className: 'ticket-info__stops-count' }, segments[0].stops.length + " " + Object(_assets_helpers__WEBPACK_IMPORTED_MODULE_1__["declineWord"])(segments[0].stops.length, ['пересадка', 'пересадки', 'пересадок'])),
             react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", { className: 'ticket-info__stops-cities' }, "" + segments[0].stops.join(', '))),
         react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", { className: 'ticket-info__route' },
             react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", { className: 'ticket-info__origins' }, segments[1].origin + " - " + segments[0].origin),
-            react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", { className: 'ticket-info__dates' }, Object(_assets_helpers__WEBPACK_IMPORTED_MODULE_1__["getHoursAndMinutesWithColon"])(segments[1].date) + " - " + Object(_assets_helpers__WEBPACK_IMPORTED_MODULE_1__["getHoursAndMinutesWithColon"])(segments[0].date))),
+            react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", { className: 'ticket-info__dates' }, Object(_formaters__WEBPACK_IMPORTED_MODULE_2__["formateIntervalWithColon"])(segments[1].date, segments[1].duration))),
         react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", { className: 'ticket-info__time-interval' },
             react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", { className: 'ticket-info__time-interval-title' }, "\u0432 \u043F\u0443\u0442\u0438"),
-            react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", { className: 'ticket-info__interval' }, Object(_assets_helpers__WEBPACK_IMPORTED_MODULE_1__["getHoursAndMinutesIntervalWithPostfixes"])(segments[1].duration))),
+            react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", { className: 'ticket-info__interval' }, Object(_formaters__WEBPACK_IMPORTED_MODULE_2__["formateIntervalWithPostfixes"])(segments[1].duration))),
         react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", { className: 'ticket-info__stops' },
-            react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", { className: 'ticket-info__stops-count' }, segments[1].stops.length + " \u043F\u0435\u0440\u0435\u0441\u0430\u0434\u043A\u0438"),
+            react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", { className: 'ticket-info__stops-count' }, segments[1].stops.length + " " + Object(_assets_helpers__WEBPACK_IMPORTED_MODULE_1__["declineWord"])(segments[1].stops.length, ['пересадка', 'пересадки', 'пересадок'])),
             react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", { className: 'ticket-info__stops-cities' }, "" + segments[1].stops.join(', ')))));
 }
 /* harmony default export */ __webpack_exports__["default"] = (TicketInfo);
@@ -34018,4 +34070,4 @@ function setTicketsResponse(tickets) {
 /***/ })
 
 /******/ });
-//# sourceMappingURL=prod-page.js.map?v=fcc025d963e19a95ae46
+//# sourceMappingURL=prod-page.js.map?v=e56db4a6f6bb8d1aa7cf
