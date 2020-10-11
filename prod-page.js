@@ -280,6 +280,17 @@ module.exports = hoistNonReactStatics;
 
 /***/ }),
 
+/***/ "./node_modules/mini-css-extract-plugin/dist/loader.js!./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js?!./node_modules/sass-loader/dist/cjs.js!./src/components/header/header.scss":
+/*!**********************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/mini-css-extract-plugin/dist/loader.js!./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js??ref--8-3!./node_modules/sass-loader/dist/cjs.js!./src/components/header/header.scss ***!
+  \**********************************************************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+// extracted by mini-css-extract-plugin
+
+/***/ }),
+
 /***/ "./node_modules/mini-css-extract-plugin/dist/loader.js!./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js?!./node_modules/sass-loader/dist/cjs.js!./src/components/loader/loader.scss":
 /*!**********************************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/mini-css-extract-plugin/dist/loader.js!./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js??ref--8-3!./node_modules/sass-loader/dist/cjs.js!./src/components/loader/loader.scss ***!
@@ -32470,6 +32481,8 @@ var map = {
 	"./assets/fonts/OpenSans/open-sans-regular.ttf": "./src/assets/fonts/OpenSans/open-sans-regular.ttf",
 	"./assets/fonts/OpenSans/open-sans-regular.woff": "./src/assets/fonts/OpenSans/open-sans-regular.woff",
 	"./assets/fonts/OpenSans/open-sans-regular.woff2": "./src/assets/fonts/OpenSans/open-sans-regular.woff2",
+	"./components/filters-list/images/checkmark.svg": "./src/components/filters-list/images/checkmark.svg",
+	"./components/header/images/logo.svg": "./src/components/header/images/logo.svg",
 	"./components/ticket-info/images/logo.png": "./src/components/ticket-info/images/logo.png",
 	"./data/images/painting-1.jpg": "./src/data/images/painting-1.jpg",
 	"./data/images/painting-2.jpg": "./src/data/images/painting-2.jpg",
@@ -32870,6 +32883,87 @@ var mapStateToProps = function (state) { return state; };
 
 /***/ }),
 
+/***/ "./src/components/filters-list/images/checkmark.svg":
+/*!**********************************************************!*\
+  !*** ./src/components/filters-list/images/checkmark.svg ***!
+  \**********************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = (__webpack_require__.p + "src/components/filters-list/images/checkmark.svg");
+
+/***/ }),
+
+/***/ "./src/components/header/header.scss":
+/*!*******************************************!*\
+  !*** ./src/components/header/header.scss ***!
+  \*******************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+var api = __webpack_require__(/*! ../../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js");
+            var content = __webpack_require__(/*! !../../../node_modules/mini-css-extract-plugin/dist/loader.js!../../../node_modules/css-loader/dist/cjs.js!../../../node_modules/postcss-loader/dist/cjs.js??ref--8-3!../../../node_modules/sass-loader/dist/cjs.js!./header.scss */ "./node_modules/mini-css-extract-plugin/dist/loader.js!./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js?!./node_modules/sass-loader/dist/cjs.js!./src/components/header/header.scss");
+
+            content = content.__esModule ? content.default : content;
+
+            if (typeof content === 'string') {
+              content = [[module.i, content, '']];
+            }
+
+var options = {};
+
+options.insert = "head";
+options.singleton = false;
+
+var update = api(content, options);
+
+
+
+module.exports = content.locals || {};
+
+/***/ }),
+
+/***/ "./src/components/header/header.tsx":
+/*!******************************************!*\
+  !*** ./src/components/header/header.tsx ***!
+  \******************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _compilationOptions__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../compilationOptions */ "./src/compilationOptions.ts");
+/* harmony import */ var _header_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./header.scss */ "./src/components/header/header.scss");
+/* harmony import */ var _header_scss__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_header_scss__WEBPACK_IMPORTED_MODULE_2__);
+
+
+
+function Header() {
+    return (react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("header", { className: 'header' },
+        react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", { src: (_compilationOptions__WEBPACK_IMPORTED_MODULE_1__["default"].forGithubPages ? '/Aviasales' : '') + "/src/components/header/images/logo.svg" })));
+}
+/* harmony default export */ __webpack_exports__["default"] = (Header);
+
+
+/***/ }),
+
+/***/ "./src/components/header/images/logo.svg":
+/*!***********************************************!*\
+  !*** ./src/components/header/images/logo.svg ***!
+  \***********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = (__webpack_require__.p + "src/components/header/images/logo.svg");
+
+/***/ }),
+
 /***/ "./src/components/loader/loader.scss":
 /*!*******************************************!*\
   !*** ./src/components/loader/loader.scss ***!
@@ -33061,34 +33155,32 @@ module.exports = content.locals || {};
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _compilationOptions__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../compilationOptions */ "./src/compilationOptions.ts");
-/* harmony import */ var _assets_helpers__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../assets/helpers */ "./src/assets/helpers.ts");
-/* harmony import */ var _ticket_info_scss__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./ticket-info.scss */ "./src/components/ticket-info/ticket-info.scss");
-/* harmony import */ var _ticket_info_scss__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_ticket_info_scss__WEBPACK_IMPORTED_MODULE_3__);
-
+/* harmony import */ var _assets_helpers__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../assets/helpers */ "./src/assets/helpers.ts");
+/* harmony import */ var _ticket_info_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./ticket-info.scss */ "./src/components/ticket-info/ticket-info.scss");
+/* harmony import */ var _ticket_info_scss__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_ticket_info_scss__WEBPACK_IMPORTED_MODULE_2__);
 
 
 
 function TicketInfo(props) {
     var _a = props.ticket, price = _a.price, carrier = _a.carrier, segments = _a.segments;
     return (react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", { className: 'ticket-info' },
-        react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", { className: 'ticket-info__price' }, Object(_assets_helpers__WEBPACK_IMPORTED_MODULE_2__["formateNumber"])(price) + " \u0420"),
-        react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", { className: 'ticket-info__logo', src: (_compilationOptions__WEBPACK_IMPORTED_MODULE_1__["default"].forGithubPages ? '/Aviasales' : '') + "/src/components/ticket-info/images/logo.png", alt: carrier }),
+        react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", { className: 'ticket-info__price' }, Object(_assets_helpers__WEBPACK_IMPORTED_MODULE_1__["formateNumber"])(price) + " \u0420"),
+        react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", { className: 'ticket-info__logo', src: "https://pics.avs.io/99/36/" + carrier + ".png", alt: carrier }),
         react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", { className: 'ticket-info__route' },
             react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", { className: 'ticket-info__origins' }, segments[0].origin + " - " + segments[1].origin),
-            react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", { className: 'ticket-info__dates' }, Object(_assets_helpers__WEBPACK_IMPORTED_MODULE_2__["getHoursAndMinutesWithColon"])(segments[0].date) + " - " + Object(_assets_helpers__WEBPACK_IMPORTED_MODULE_2__["getHoursAndMinutesWithColon"])(segments[1].date))),
+            react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", { className: 'ticket-info__dates' }, Object(_assets_helpers__WEBPACK_IMPORTED_MODULE_1__["getHoursAndMinutesWithColon"])(segments[0].date) + " - " + Object(_assets_helpers__WEBPACK_IMPORTED_MODULE_1__["getHoursAndMinutesWithColon"])(segments[1].date))),
         react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", { className: 'ticket-info__time-interval' },
             react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", { className: 'ticket-info__time-interval-title' }, "\u0432 \u043F\u0443\u0442\u0438"),
-            react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", { className: 'ticket-info__interval' }, Object(_assets_helpers__WEBPACK_IMPORTED_MODULE_2__["getHoursAndMinutesIntervalWithPostfixes"])(segments[0].duration))),
+            react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", { className: 'ticket-info__interval' }, Object(_assets_helpers__WEBPACK_IMPORTED_MODULE_1__["getHoursAndMinutesIntervalWithPostfixes"])(segments[0].duration))),
         react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", { className: 'ticket-info__stops' },
             react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", { className: 'ticket-info__stops-count' }, segments[0].stops.length + " \u043F\u0435\u0440\u0435\u0441\u0430\u0434\u043A\u0438"),
             react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", { className: 'ticket-info__stops-cities' }, "" + segments[0].stops.join(', '))),
         react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", { className: 'ticket-info__route' },
             react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", { className: 'ticket-info__origins' }, segments[1].origin + " - " + segments[0].origin),
-            react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", { className: 'ticket-info__dates' }, Object(_assets_helpers__WEBPACK_IMPORTED_MODULE_2__["getHoursAndMinutesWithColon"])(segments[1].date) + " - " + Object(_assets_helpers__WEBPACK_IMPORTED_MODULE_2__["getHoursAndMinutesWithColon"])(segments[0].date))),
+            react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", { className: 'ticket-info__dates' }, Object(_assets_helpers__WEBPACK_IMPORTED_MODULE_1__["getHoursAndMinutesWithColon"])(segments[1].date) + " - " + Object(_assets_helpers__WEBPACK_IMPORTED_MODULE_1__["getHoursAndMinutesWithColon"])(segments[0].date))),
         react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", { className: 'ticket-info__time-interval' },
             react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", { className: 'ticket-info__time-interval-title' }, "\u0432 \u043F\u0443\u0442\u0438"),
-            react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", { className: 'ticket-info__interval' }, Object(_assets_helpers__WEBPACK_IMPORTED_MODULE_2__["getHoursAndMinutesIntervalWithPostfixes"])(segments[1].duration))),
+            react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", { className: 'ticket-info__interval' }, Object(_assets_helpers__WEBPACK_IMPORTED_MODULE_1__["getHoursAndMinutesIntervalWithPostfixes"])(segments[1].duration))),
         react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", { className: 'ticket-info__stops' },
             react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", { className: 'ticket-info__stops-count' }, segments[1].stops.length + " \u043F\u0435\u0440\u0435\u0441\u0430\u0434\u043A\u0438"),
             react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", { className: 'ticket-info__stops-cities' }, "" + segments[1].stops.join(', ')))));
@@ -33516,8 +33608,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_tickets_list_tickets_list__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../components/tickets-list/tickets-list */ "./src/components/tickets-list/tickets-list.tsx");
 /* harmony import */ var _components_filters_list_filters_list__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../components/filters-list/filters-list */ "./src/components/filters-list/filters-list.tsx");
 /* harmony import */ var _components_sorter_panel_sorter_panel__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../components/sorter-panel/sorter-panel */ "./src/components/sorter-panel/sorter-panel.tsx");
-/* harmony import */ var _prod_page_scss__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./prod-page.scss */ "./src/pages/prod-page/prod-page.scss");
-/* harmony import */ var _prod_page_scss__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_prod_page_scss__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _components_header_header__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../components/header/header */ "./src/components/header/header.tsx");
+/* harmony import */ var _prod_page_scss__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./prod-page.scss */ "./src/pages/prod-page/prod-page.scss");
+/* harmony import */ var _prod_page_scss__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_prod_page_scss__WEBPACK_IMPORTED_MODULE_6__);
+
 
 
 
@@ -33554,7 +33648,8 @@ var filterItems = [
 function ProdPage(props) {
     var filtersAndSorterState = props.filtersAndSorterState;
     return (react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", { className: 'prod-page' },
-        react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("header", { className: 'prod-page__header' }, "HEADER"),
+        react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("header", { className: 'prod-page__header' },
+            react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_header_header__WEBPACK_IMPORTED_MODULE_5__["default"], null)),
         react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", { className: 'prod-page__main-content' },
             react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", { className: 'prod-page__filter-panel' },
                 react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_filters_list_filters_list__WEBPACK_IMPORTED_MODULE_3__["default"], { items: filterItems.map(function (filterItem) {
@@ -33923,4 +34018,4 @@ function setTicketsResponse(tickets) {
 /***/ })
 
 /******/ });
-//# sourceMappingURL=prod-page.js.map?v=e8eb3ca770d6099abc1f
+//# sourceMappingURL=prod-page.js.map?v=fcc025d963e19a95ae46

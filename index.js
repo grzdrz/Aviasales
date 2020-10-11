@@ -422,6 +422,8 @@ var map = {
 	"./assets/fonts/OpenSans/open-sans-regular.ttf": "./src/assets/fonts/OpenSans/open-sans-regular.ttf",
 	"./assets/fonts/OpenSans/open-sans-regular.woff": "./src/assets/fonts/OpenSans/open-sans-regular.woff",
 	"./assets/fonts/OpenSans/open-sans-regular.woff2": "./src/assets/fonts/OpenSans/open-sans-regular.woff2",
+	"./components/filters-list/images/checkmark.svg": "./src/components/filters-list/images/checkmark.svg",
+	"./components/header/images/logo.svg": "./src/components/header/images/logo.svg",
 	"./components/ticket-info/images/logo.png": "./src/components/ticket-info/images/logo.png",
 	"./data/images/painting-1.jpg": "./src/data/images/painting-1.jpg",
 	"./data/images/painting-2.jpg": "./src/data/images/painting-2.jpg",
@@ -675,6 +677,32 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./src/components/filters-list/images/checkmark.svg":
+/*!**********************************************************!*\
+  !*** ./src/components/filters-list/images/checkmark.svg ***!
+  \**********************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = (__webpack_require__.p + "src/components/filters-list/images/checkmark.svg");
+
+/***/ }),
+
+/***/ "./src/components/header/images/logo.svg":
+/*!***********************************************!*\
+  !*** ./src/components/header/images/logo.svg ***!
+  \***********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = (__webpack_require__.p + "src/components/header/images/logo.svg");
+
+/***/ }),
+
 /***/ "./src/components/ticket-info/images/logo.png":
 /*!****************************************************!*\
   !*** ./src/components/ticket-info/images/logo.png ***!
@@ -837,4 +865,4 @@ __webpack_require__.r(__webpack_exports__);
 /***/ })
 
 /******/ });
-//# sourceMappingURL=index.js.map?v=e8eb3ca770d6099abc1f
+//# sourceMappingURL=index.js.map?v=fcc025d963e19a95ae46
